@@ -9,6 +9,10 @@ const LoginPage = lazy(() =>
 	import('../../pages').then(({ LoginPage }) => ({ default: LoginPage }))
 )
 
+const CalcPage = lazy(() =>
+	import('../../pages').then(({ CalcPage }) => ({ default: CalcPage }))
+)
+
 const Page404 = lazy(() =>
 	import('../../pages').then(({ Page404 }) => ({ default: Page404 }))
 )
@@ -21,6 +25,7 @@ export const App = (): JSX.Element => {
 				<Routes>
 					<Route path='/smartcalc/' element={<MainPage />} />
 					<Route path='/smartcalc/login' element={<LoginPage />} />
+					<Route path='/smartcalc/calc' element={<CalcPage />} />
 					<Route path='*' element={<Page404 />} />
 				</Routes>
 			</Suspense>
