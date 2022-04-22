@@ -5,6 +5,10 @@ import { MainPage } from '../../pages'
 import { Header } from '../Header/Header'
 import { Spinner } from '../Spinner/Spinner'
 
+const LoginPage = lazy(() =>
+	import('../../pages').then(({ LoginPage }) => ({ default: LoginPage }))
+)
+
 const Page404 = lazy(() =>
 	import('../../pages').then(({ Page404 }) => ({ default: Page404 }))
 )
@@ -16,6 +20,7 @@ export const App = (): JSX.Element => {
 			<Suspense fallback={<Spinner />}>
 				<Routes>
 					<Route path='/smartcalc/' element={<MainPage />} />
+					<Route path='/smartcalc/login' element={<LoginPage />} />
 					<Route path='*' element={<Page404 />} />
 				</Routes>
 			</Suspense>
