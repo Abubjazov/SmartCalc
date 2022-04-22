@@ -1,0 +1,48 @@
+@import '../../variables';
+
+.header {
+	position: fixed;
+	top: 0;
+	background: $main-color;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100vw;
+	min-height: 10vh;
+	padding: 0 3vw;
+	z-index: 10;
+
+	@media (max-width: 900px) {
+		min-height: 5vh;
+	}
+
+	h1 {
+		font-size: 31px;
+		line-height: 31px;
+		font-weight: 300;
+		position: relative;
+		color: $white;
+
+		span {
+			font-weight: 700;
+			color: $grey;
+		}
+	}
+
+	.header-menu {
+		ul {
+			display: flex;
+			width: 100px;
+			justify-content: space-between;
+			font-weight: 300;
+			font-size: 18px;
+			line-height: 18px;
+
+			a {
+				color: $white;
+				text-decoration: none;
+				transition: all 0.1s linear;
+			}
+		}
+	}
+}
