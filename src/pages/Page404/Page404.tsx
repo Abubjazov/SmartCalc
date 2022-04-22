@@ -1,4 +1,4 @@
-import { ErrorGif } from '../../components/ErrorGif/ErrorGif'
+import { ErrorGif } from '../../components'
 
 export const Page404 = (): JSX.Element => (
 	<main
