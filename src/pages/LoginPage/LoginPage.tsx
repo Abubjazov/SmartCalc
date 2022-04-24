@@ -1,4 +1,5 @@
-import { NavLink } from 'react-router-dom'
+import { Login } from '../../components'
+
 import './LoginPage.scss'
 
 export const LoginPage = (): JSX.Element => {
@@ -7,10 +8,7 @@ export const LoginPage = (): JSX.Element => {
 			{/* <PageMarker pageName='main' /> */}
 
 			<div className='container'>
-				LOGIN PAGE
-				<input type='text' placeholder='LOGIN' />
-				<input type='text' placeholder='PASSWORD' />
-				<NavLink to='/smartcalc/calc'>Login</NavLink>
+				<Login />
 			</div>
 		</main>
 	)

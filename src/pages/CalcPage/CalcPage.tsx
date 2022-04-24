@@ -1,5 +1,5 @@
-import { NavLink } from 'react-router-dom'
-import { Spinner } from '../../components/Spinner/Spinner'
+import { Calculator } from '../../components'
+
 import './CalcPage.scss'
 
 export const CalcPage = (): JSX.Element => {
@@ -8,11 +8,16 @@ export const CalcPage = (): JSX.Element => {
 			{/* <PageMarker pageName='calc' /> */}
 
 			<div className='container'>
-				CALC PAGE
-				<input type='text' placeholder='ITEM' />
-				<input type='text' placeholder='ITEM' />
-				<NavLink to='/smartcalc/calc'>Calculate</NavLink>
-				<Spinner />
+				<div className='calc-info'>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error
+					laboriosam quisquam nobis, neque unde, eaque dolor ea molestiae,
+					pariatur commodi minus tempora consectetur culpa nam. Quia earum animi
+					labore aperiam.Lorem, ipsum dolor sit amet consectetur adipisicing
+					elit. Error laboriosam quisquam nobis, neque unde, eaque dolor ea
+					molestiae, pariatur commodi minus tempora consectetur culpa nam. Quia
+					earum animi labore aperiam.
+				</div>
+				<Calculator />
 			</div>
 		</main>
 	)
