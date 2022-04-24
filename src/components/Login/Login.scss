@@ -1,0 +1,40 @@
+@import '../../variables';
+
+.login-widget {
+	display: grid;
+	grid-template-columns: auto-fit, 100px;
+	grid-auto-rows: 25px;
+	row-gap: 10px;
+	justify-items: center;
+
+	a {
+		border-radius: 20px;
+		padding-top: 11px;
+		width: 100px;
+		height: 40px;
+		text-align: center;
+		font-size: 18px;
+		line-height: 18px;
+		background-color: $main-color;
+		color: $white;
+		text-decoration: none;
+		transition: all 0.1s linear;
+	}
+
+	input {
+		height: 25px;
+		border: none;
+		border-bottom: 2px solid $main-color;
+	}
+
+	.add-item {
+		width: 30px;
+		height: 30px;
+		text-align: center;
+		background-color: $main-color;
+		color: $white;
+		font-size: 30px;
+		line-height: 30px;
+		border-radius: 50px;
+	}
+}
