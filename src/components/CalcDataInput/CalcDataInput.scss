@@ -1,0 +1,42 @@
+@import '../../variables';
+
+.calc-data-input {
+	display: grid;
+	grid-template-columns: 300px;
+	grid-template-rows: 50px 38px 38px;
+	grid-row: auto;
+	row-gap: 10px;
+	justify-items: flex-start;
+
+	.add-item {
+		width: 30px;
+		height: 30px;
+		text-align: center;
+		background-color: $main-color;
+		color: $white;
+		font-size: 30px;
+		line-height: 30px;
+		border-radius: 50px;
+	}
+	.added-item {
+		margin-bottom: 13px;
+		display: flex;
+	}
+
+	.remove-item {
+		margin-left: 10px;
+		width: 25px;
+		height: 25px;
+		text-align: center;
+		background-color: red;
+		color: $white;
+		font-size: 30px;
+		line-height: 20px;
+		border-radius: 50px;
+	}
+
+	a {
+		margin-top: 0;
+		justify-self: center;
+	}
+}

@@ -1,13 +1,15 @@
 @import '../../variables';
 
 .login-widget {
+	margin-top: 30vh;
 	display: grid;
-	grid-template-columns: auto-fit, 100px;
+	grid-template-columns: auto;
 	grid-auto-rows: 25px;
-	row-gap: 10px;
+	row-gap: 15px;
 	justify-items: center;
 
 	a {
+		margin-top: 30px;
 		border-radius: 20px;
 		padding-top: 11px;
 		width: 100px;
@@ -23,18 +25,8 @@
 
 	input {
 		height: 25px;
+		width: 260px;
 		border: none;
 		border-bottom: 2px solid $main-color;
-	}
-
-	.add-item {
-		width: 30px;
-		height: 30px;
-		text-align: center;
-		background-color: $main-color;
-		color: $white;
-		font-size: 30px;
-		line-height: 30px;
-		border-radius: 50px;
 	}
 }

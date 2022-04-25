@@ -8,6 +8,8 @@
 		min-height: 100vh;
 		max-width: calc(100vw - 2vw);
 		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr;
 
 		@media (max-width: 900px) {
 			padding: 6vh 0 0 0;

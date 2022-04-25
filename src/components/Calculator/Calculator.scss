@@ -23,17 +23,6 @@
 		border-bottom: 2px solid $main-color;
 	}
 
-	.add-item {
-		width: 30px;
-		height: 30px;
-		text-align: center;
-		background-color: $main-color;
-		color: $white;
-		font-size: 30px;
-		line-height: 30px;
-		border-radius: 50px;
-	}
-
 	.sort {
 		width: 30px;
 		height: 30px;
@@ -43,21 +32,6 @@
 		font-size: 30px;
 		line-height: 30px;
 		border-radius: 50px;
-	}
-
-	.calc-input {
-		margin-top: 10px;
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-template-rows: 50px 40px 40px;
-		grid-row: auto;
-		row-gap: 10px;
-		justify-items: flex-start;
-
-		a {
-			margin-top: 13px;
-			justify-self: center;
-		}
 	}
 
 	.calc-confirm {
@@ -98,9 +72,5 @@
 			display: flex;
 			justify-content: space-between;
 		}
-	}
-
-	caption {
-		padding: 10px;
 	}
 }
