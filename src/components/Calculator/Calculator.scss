@@ -23,40 +23,6 @@
 		border-bottom: 2px solid $main-color;
 	}
 
-	.sort {
-		width: 30px;
-		height: 30px;
-		text-align: center;
-		background-color: $main-color;
-		color: $white;
-		font-size: 30px;
-		line-height: 30px;
-		border-radius: 50px;
-	}
-
-	.calc-confirm {
-		margin-top: 10px;
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-template-rows: 50px 40px auto 40px;
-		grid-row: 40px;
-		row-gap: 10px;
-		justify-items: flex-start;
-
-		&-search {
-			margin-top: 13px;
-			display: flex;
-			justify-content: space-between;
-		}
-
-		&-footer {
-			width: 90%;
-			margin-top: 13px;
-			display: flex;
-			justify-content: space-between;
-		}
-	}
-
 	.calc-result {
 		margin-top: 20px;
 		display: grid;
