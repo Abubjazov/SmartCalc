@@ -1,0 +1,18 @@
+@import '../../variables';
+
+.calc-data-result {
+	margin-top: 20px;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 50px 40px auto 40px;
+	grid-row: 40px;
+	row-gap: 10px;
+	justify-items: flex-start;
+
+	&-footer {
+		width: 90%;
+		margin-top: 13px;
+		display: flex;
+		justify-content: space-between;
+	}
+}
