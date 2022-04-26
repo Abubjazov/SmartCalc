@@ -8,10 +8,10 @@
 	row-gap: 15px;
 	justify-items: center;
 
-	a {
+	button {
 		margin-top: 30px;
+		// border: none;
 		border-radius: 20px;
-		padding-top: 11px;
 		width: 100px;
 		height: 40px;
 		text-align: center;
@@ -19,8 +19,8 @@
 		line-height: 18px;
 		background-color: $main-color;
 		color: $white;
-		text-decoration: none;
 		transition: all 0.1s linear;
+		cursor: pointer;
 	}
 
 	input {
