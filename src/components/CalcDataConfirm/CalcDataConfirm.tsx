@@ -1,49 +1,30 @@
 import { nanoid } from 'nanoid'
 import { ChangeEvent, useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import { matchCheck } from '../../utils/utils'
 
 import './CalcDataConfirm.scss'
 
 export const CalcDataConfirm = (): JSX.Element => {
-	const [itemsI] = useState<number[]>([12, 11, 13])
-	const [items, setItems] = useState<number[]>([12, 11, 13])
-	const [search, setSearch] = useState<string | undefined>()
-	const [sortDirection, setSortDirection] = useState<boolean | undefined>(true)
+	const [items] = useState<number[]>([12, 11, 13])
+	const [sortedItems, setSortedItems] = useState<number[]>([12, 11, 13])
+	const [search, setSearch] = useState<string>('')
+	const [sortDirection, setSortDirection] = useState<boolean>(true)
 
 	const sort = () => {
 		if (sortDirection) {
-			setItems(items.sort((a, b) => a - b))
+			setSortedItems(sortedItems.sort((a, b) => a - b))
 			setSortDirection(false)
 		} else {
-			setItems(items.sort((a, b) => b - a))
+			setSortedItems(sortedItems.sort((a, b) => b - a))
 			setSortDirection(true)
 		}
-	}
-
-	const matchCheck = (item: number, value: string) => {
-		const stringItem = item.toString()
-
-		return splitString(stringItem, value.length).includes(value)
-	}
-
-	const splitString = (item: string, step: number) => {
-		const result: string[] = []
-
-		for (let i = 0; i < item.length - step + 1; i++) {
-			result.push(item.substring(i, i + step))
-		}
-
-		return result
 	}
 
 	const changeHandler = (e: ChangeEvent<HTMLInputElement>) => {
 		setSearch(e.target.value)
 
-		setItems(
-			itemsI
-				.filter(item => matchCheck(item, e.target.value))
-				.sort(sortDirection ? (a, b) => b - a : (a, b) => a - b)
-		)
+		setSortedItems(items.filter(item => matchCheck(item, e.target.value)))
 	}
 
 	return (
@@ -66,7 +47,7 @@ export const CalcDataConfirm = (): JSX.Element => {
 			</div>
 
 			<ul>
-				{items.map(item => (
+				{sortedItems.map(item => (
 					<li key={nanoid()}>{item}</li>
 				))}
 			</ul>
