@@ -1,0 +1,51 @@
+@import '../../variables';
+
+.calc-data-confirm {
+	display: grid;
+	grid-template-columns: 300px;
+	grid-template-rows: 50px 40px auto auto;
+	grid-row: auto;
+	row-gap: 10px;
+	justify-items: center;
+
+	ul {
+		margin-top: 13px;
+		justify-self: center;
+		width: 1fr;
+
+		li {
+			width: 200px;
+			text-align: center;
+			border-bottom: 2px solid $main-color;
+		}
+	}
+
+	&-search {
+		margin-top: 13px;
+		display: flex;
+		justify-content: space-between;
+
+		.sort {
+			width: 24px;
+			height: 24px;
+			padding-left: 5px;
+			padding-top: 1px;
+			background-color: $main-color;
+			color: $white;
+			font-size: 30px;
+			line-height: 33px;
+			border-radius: 50px;
+		}
+
+		.rotated {
+			transform: rotate(180deg);
+		}
+	}
+
+	&-footer {
+		width: 90%;
+		margin-top: 31px;
+		display: flex;
+		justify-content: space-between;
+	}
+}

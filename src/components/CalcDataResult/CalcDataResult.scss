@@ -1,0 +1,37 @@
+@import '../../variables';
+
+.calc-data-result {
+	display: grid;
+	grid-template-columns: 300px;
+	grid-template-rows: 50px auto 30px auto;
+	grid-row: auto;
+	row-gap: 10px;
+	justify-items: center;
+
+	h2 {
+		color: $grey;
+	}
+
+	ul {
+		margin-top: 13px;
+		justify-self: center;
+		width: 1fr;
+
+		li {
+			width: 200px;
+			text-align: center;
+			border-bottom: 2px solid $main-color;
+		}
+
+		.green {
+			color: $green;
+		}
+	}
+
+	&-footer {
+		width: 90%;
+		margin-top: 31px;
+		display: flex;
+		justify-content: space-between;
+	}
+}

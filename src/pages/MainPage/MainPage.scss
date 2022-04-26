@@ -8,13 +8,13 @@
 		min-height: 100vh;
 		max-width: calc(100vw - 2vw);
 		display: grid;
-		grid-template-columns: auto-fit, 100px;
-		grid-template-rows: 150px 25px;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto;
 		row-gap: 10px;
 		justify-items: center;
 
 		@media (max-width: 900px) {
-			padding: 6vh 0 0 0;
+			padding: 6vh 1vw 3vh 1vw;
 		}
 
 		a {
@@ -29,6 +29,10 @@
 			color: $white;
 			text-decoration: none;
 			transition: all 0.1s linear;
+
+			@media (max-width: 900px) {
+				align-self: flex-end;
+			}
 		}
 	}
 }
