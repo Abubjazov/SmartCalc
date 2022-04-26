@@ -1,8 +1,12 @@
+import { nanoid } from 'nanoid'
 import { CalcAction, CalcActionTypes, CalcState } from '../../interfaces'
 
 export const initialState: CalcState = {
 	items: [],
-	inputItems: [],
+	inputItems: [
+		{ key: nanoid(), value: '' },
+		{ key: nanoid(), value: '' },
+	],
 	sortedItems: [],
 	sortDirection: true,
 	searchString: '',
@@ -32,6 +36,31 @@ export const calcReducer = (
 				...state,
 				status: 'error',
 				error: action.payload,
+			}
+
+		case CalcActionTypes.ADD_INPUT_ITEM:
+			return {
+				...state,
+				inputItems: [...state.inputItems, action.payload],
+			}
+
+		case CalcActionTypes.CHANGE_INPUT_ITEM:
+			return {
+				...state,
+				inputItems: state.inputItems.map(item => {
+					if (item.key === action.payload.key) {
+						item.value = action.payload.value
+					}
+					return item
+				}),
+			}
+
+		case CalcActionTypes.REMOVE_INPUT_ITEM:
+			return {
+				...state,
+				inputItems: state.inputItems.filter(
+					item => item.key !== action.payload
+				),
 			}
 
 		default:

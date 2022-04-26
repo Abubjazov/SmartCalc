@@ -2,9 +2,17 @@ export enum CalcActionTypes {
 	FETCH_CURRENT_STATE = 'FETCH_CURRENT_STATE',
 	FETCH_CURRENT_STATE_SUCCESS = 'FETCH_CURRENT_STATE_SUCCESS',
 	FETCH_CURRENT_STATE_ERROR = 'FETCH_CURRENT_STATE_ERROR',
+
+	SWITCH_TO_CONFIRM = 'SWITCH_TO_CONFIRM',
+	SWITCH_TO_CONFIRM_SUCCESS = 'SWITCH_TO_CONFIRM_SUCCESS',
+	SWITCH_TO_CONFIRM_ERROR = 'SWITCH_TO_CONFIRM_ERROR',
+
+	CHANGE_INPUT_ITEM = 'CHANGE_INPUT_ITEM',
+	ADD_INPUT_ITEM = 'ADD_INPUT_ITEM',
+	REMOVE_INPUT_ITEM = 'REMOVE_INPUT_ITEM',
 }
 
-export interface InputItems {
+export interface InputItem {
 	key: string
 	value: string
 }
@@ -16,7 +24,7 @@ export interface UserState {
 
 export interface CalcState {
 	items: number[]
-	inputItems: InputItems[]
+	inputItems: InputItem[]
 	sortedItems: number[]
 	sortDirection: boolean
 	searchString: string
@@ -39,7 +47,42 @@ interface FetchCurrentStateErrorAction {
 	payload: string
 }
 
+interface SwitchToConfirmAction {
+	type: CalcActionTypes.SWITCH_TO_CONFIRM
+}
+
+interface SwitchToConfirmSuccessAction {
+	type: CalcActionTypes.SWITCH_TO_CONFIRM_SUCCESS
+	payload: UserState
+}
+
+interface SwitchToConfirmErrorAction {
+	type: CalcActionTypes.SWITCH_TO_CONFIRM_ERROR
+	payload: string
+}
+
+interface ChangeInputItemAction {
+	type: CalcActionTypes.CHANGE_INPUT_ITEM
+	payload: InputItem
+}
+
+interface AddInputItemAction {
+	type: CalcActionTypes.ADD_INPUT_ITEM
+	payload: InputItem
+}
+
+interface RemoveInputItemAction {
+	type: CalcActionTypes.REMOVE_INPUT_ITEM
+	payload: string
+}
+
 export type CalcAction =
 	| FetchCurrentStateAction
 	| FetchCurrentStateSuccessAction
 	| FetchCurrentStateErrorAction
+	| SwitchToConfirmAction
+	| SwitchToConfirmSuccessAction
+	| SwitchToConfirmErrorAction
+	| ChangeInputItemAction
+	| AddInputItemAction
+	| RemoveInputItemAction

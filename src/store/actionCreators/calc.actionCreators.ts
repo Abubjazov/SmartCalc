@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { Dispatch } from 'redux'
 
-import { CalcAction, CalcActionTypes } from '../../interfaces'
+import { CalcAction, CalcActionTypes, InputItem } from '../../interfaces'
 
 export const fetchCurrentState = () => {
 	return async (dispatch: Dispatch<CalcAction>) => {
@@ -20,5 +20,32 @@ export const fetchCurrentState = () => {
 				payload: `An error occurred while loading the user data!*${error}`,
 			})
 		}
+	}
+}
+
+export const addInputItem = (item: InputItem) => {
+	return async (dispatch: Dispatch<CalcAction>) => {
+		dispatch({
+			type: CalcActionTypes.ADD_INPUT_ITEM,
+			payload: item,
+		})
+	}
+}
+
+export const changeInputItem = (key: string, value: string) => {
+	return async (dispatch: Dispatch<CalcAction>) => {
+		dispatch({
+			type: CalcActionTypes.CHANGE_INPUT_ITEM,
+			payload: { key, value },
+		})
+	}
+}
+
+export const removeInputItem = (itemKey: string) => {
+	return async (dispatch: Dispatch<CalcAction>) => {
+		dispatch({
+			type: CalcActionTypes.REMOVE_INPUT_ITEM,
+			payload: itemKey,
+		})
 	}
 }
