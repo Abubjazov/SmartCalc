@@ -1,35 +1,51 @@
 @import '../../variables';
 
 .calc-data-confirm {
-	margin-top: 10px;
 	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: 50px 40px auto 40px;
-	grid-row: 40px;
+	grid-template-columns: 300px;
+	grid-template-rows: 50px 40px auto auto;
+	grid-row: auto;
 	row-gap: 10px;
-	justify-items: flex-start;
+	justify-items: center;
+
+	ul {
+		margin-top: 13px;
+		justify-self: center;
+		width: 1fr;
+
+		li {
+			width: 200px;
+			text-align: center;
+			border-bottom: 2px solid $main-color;
+		}
+	}
 
 	&-search {
 		margin-top: 13px;
 		display: flex;
 		justify-content: space-between;
+
+		.sort {
+			width: 24px;
+			height: 24px;
+			padding-left: 5px;
+			padding-top: 1px;
+			background-color: $main-color;
+			color: $white;
+			font-size: 30px;
+			line-height: 33px;
+			border-radius: 50px;
+		}
+
+		.rotated {
+			transform: rotate(180deg);
+		}
 	}
 
 	&-footer {
 		width: 90%;
-		margin-top: 13px;
+		margin-top: 31px;
 		display: flex;
 		justify-content: space-between;
-	}
-
-	.sort {
-		width: 30px;
-		height: 30px;
-		text-align: center;
-		background-color: $main-color;
-		color: $white;
-		font-size: 30px;
-		line-height: 30px;
-		border-radius: 50px;
 	}
 }

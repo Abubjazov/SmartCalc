@@ -19,6 +19,7 @@
 
 		@media (max-width: 790px) {
 			grid-template-columns: 1fr;
+			align-items: center;
 
 			.calc-info {
 				display: none;

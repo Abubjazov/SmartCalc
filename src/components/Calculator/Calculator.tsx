@@ -7,8 +7,8 @@ export const Calculator = (): JSX.Element => {
 	return (
 		<div className='calc-widget'>
 			{/* <CalcDataInput /> */}
-			<CalcDataConfirm />
-			{/* <CalcDataResult /> */}
+			{/* <CalcDataConfirm /> */}
+			<CalcDataResult />
 		</div>
 	)
 }
