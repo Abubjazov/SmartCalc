@@ -1,5 +1,5 @@
-import { CalcDataConfirm } from '../CalcDataConfirm/CalcDataConfirm'
-import { CalcDataInput } from '../CalcDataInput/CalcDataInput'
+// import { CalcDataConfirm } from '../CalcDataConfirm/CalcDataConfirm'
+// import { CalcDataInput } from '../CalcDataInput/CalcDataInput'
 import { CalcDataResult } from '../CalcDataResult/CalcDataResult'
 import './Calculator.scss'
 
