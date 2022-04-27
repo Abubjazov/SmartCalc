@@ -22,7 +22,7 @@ export const fetchToken = (authData: AuthData) => {
 		} catch (error) {
 			dispatch({
 				type: AuthActionTypes.FETCH_TOKEN_ERROR,
-				payload: `An error occurred while loading the access token!*${error}`,
+				payload: `Authentication error!*${error}`,
 			})
 		}
 	}

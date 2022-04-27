@@ -22,7 +22,7 @@ export const CalcDataInput = (): JSX.Element => {
 				index < 2 ? (
 					<input
 						key={item.key}
-						type='text'
+						type='number'
 						placeholder='Введите число'
 						onChange={e => changeInputItem(item.key, e.target.value)}
 						value={item.value}
@@ -30,7 +30,7 @@ export const CalcDataInput = (): JSX.Element => {
 				) : (
 					<div className='added-item' key={item.key}>
 						<input
-							type='text'
+							type='number'
 							placeholder='Введите число'
 							onChange={e => changeInputItem(item.key, e.target.value)}
 							value={item.value}

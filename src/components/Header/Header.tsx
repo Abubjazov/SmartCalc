@@ -21,7 +21,7 @@ export const Header = (): JSX.Element => {
 							to='/smartcalc/'
 							style={({ isActive }) => ({ color: isActive ? '#696969' : '' })}
 						>
-							Main
+							Главная
 						</NavLink>
 					</li>
 
@@ -32,7 +32,7 @@ export const Header = (): JSX.Element => {
 								to='/smartcalc/calc'
 								style={({ isActive }) => ({ color: isActive ? '#696969' : '' })}
 							>
-								Calc
+								Калькулятор
 							</NavLink>
 						</li>
 					) : (
@@ -42,7 +42,7 @@ export const Header = (): JSX.Element => {
 								to='/smartcalc/login'
 								style={({ isActive }) => ({ color: isActive ? '#696969' : '' })}
 							>
-								Login
+								Авторизация
 							</NavLink>
 						</li>
 					)}

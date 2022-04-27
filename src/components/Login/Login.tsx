@@ -4,11 +4,13 @@ import { useActions } from '../../hooks/useActions'
 import bcrypt from 'bcryptjs'
 
 import './Login.scss'
+import { useTypedSelector } from '../../hooks/useTypedSelector'
 
 export const Login = (): JSX.Element => {
 	const [email, setEmail] = useState<string>('')
 	const [password, setPassword] = useState<string>('')
 
+	const { status, error } = useTypedSelector(state => state.auth)
 	const { fetchToken } = useActions()
 
 	const changeHandler = (value: string) => {
@@ -33,6 +35,11 @@ export const Login = (): JSX.Element => {
 				onChange={e => changeHandlerPwd(e.target.value)}
 				value={password}
 			/>
+			{status === 'error' && error?.includes('Authentication error!') ? (
+				<p style={{ color: 'red', fontSize: 14 }}>
+					Неправильный логин или пароль
+				</p>
+			) : null}
 			<button
 				onClick={() =>
 					fetchToken({
@@ -44,7 +51,7 @@ export const Login = (): JSX.Element => {
 					})
 				}
 			>
-				Login
+				Авторизоваться
 			</button>
 		</div>
 	)

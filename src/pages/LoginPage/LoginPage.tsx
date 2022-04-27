@@ -12,7 +12,7 @@ export const LoginPage = (): JSX.Element => {
 
 			<div className='container'>
 				{status === 'loading' ? <Spinner /> : null}
-				{status === 'waiting' ? <Login /> : null}
+				{status === 'waiting' || status === 'error' ? <Login /> : null}
 			</div>
 		</main>
 	)
