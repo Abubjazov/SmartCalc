@@ -1,8 +1,11 @@
 import { NavLink } from 'react-router-dom'
 
+import { useTypedSelector } from '../../hooks/useTypedSelector'
+
 import './MainPage.scss'
 
 export const MainPage = (): JSX.Element => {
+	const { token } = useTypedSelector(state => state.auth)
 	return (
 		<main className='main-page'>
 			{/* <PageMarker pageName='main' /> */}
@@ -21,7 +24,11 @@ export const MainPage = (): JSX.Element => {
 					ipsum optio saepe eos libero.
 				</p>
 
-				<NavLink to='/smartcalc/login'>Login</NavLink>
+				{token ? (
+					<NavLink to='/smartcalc/calc'>Calc</NavLink>
+				) : (
+					<NavLink to='/smartcalc/login'>Login</NavLink>
+				)}
 			</div>
 		</main>
 	)

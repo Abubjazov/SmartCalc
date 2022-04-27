@@ -9,12 +9,8 @@ import './CalcDataInput.scss'
 export const CalcDataInput = (): JSX.Element => {
 	const { inputItems } = useTypedSelector(state => state.calc)
 	const { token } = useTypedSelector(state => state.auth)
-	const {
-		addInputItem,
-		changeInputItem,
-		removeInputItem,
-		switchToConfirmAction,
-	} = useActions()
+	const { addInputItem, changeInputItem, removeInputItem, switchToConfirm } =
+		useActions()
 
 	const convertArray = (arr: InputItem[]): number[] =>
 		arr.map(item => +item.value)
@@ -58,9 +54,7 @@ export const CalcDataInput = (): JSX.Element => {
 				</div>
 			) : null}
 
-			<button
-				onClick={() => switchToConfirmAction(convertArray(inputItems), token)}
-			>
+			<button onClick={() => switchToConfirm(convertArray(inputItems), token)}>
 				Далее
 			</button>
 		</div>
