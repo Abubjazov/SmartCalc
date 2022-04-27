@@ -11,13 +11,6 @@ export const Login = (): JSX.Element => {
 
 	const { fetchToken } = useActions()
 
-	const loginN = () => {
-		fetchToken({
-			email,
-			password: bcrypt.hashSync(password, '$2a$10$9k5n.PAjQUFjv08.OlWN0e'),
-		})
-	}
-
 	const changeHandler = (value: string) => {
 		setEmail(value)
 	}
@@ -40,7 +33,19 @@ export const Login = (): JSX.Element => {
 				onChange={e => changeHandlerPwd(e.target.value)}
 				value={password}
 			/>
-			<button onClick={loginN}>Login</button>
+			<button
+				onClick={() =>
+					fetchToken({
+						email,
+						password: bcrypt.hashSync(
+							password,
+							'$2a$10$9k5n.PAjQUFjv08.OlWN0e'
+						),
+					})
+				}
+			>
+				Login
+			</button>
 		</div>
 	)
 }
