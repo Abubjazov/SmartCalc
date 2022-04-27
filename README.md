@@ -5,9 +5,9 @@
 **Demo:**
 Github Pages: https://abubjazov.github.io/SmartCalc/
 
-**Логин и пароль для Demo:**
-login: "test@test.com"
-password: "password"
+**Логин и пароль для Demo:**<br>
+`login: test@test.com`<br>
+`password: password`
 
 **На данный момент приложение имеет 3 реализованных раздела:**
 
