@@ -1,9 +1,12 @@
 import { AuthAction, AuthActionTypes, AuthState } from '../../interfaces'
 
+const authDataString = localStorage.getItem('smartcalc_token')
+const authData = authDataString ? JSON.parse(authDataString) : null
+
 export const initialState: AuthState = {
-	token: null,
-	name: '',
-	email: '',
+	token: authData?.token || null,
+	name: authData?.name || '',
+	email: authData?.email || '',
 	status: 'waiting',
 	error: null,
 }

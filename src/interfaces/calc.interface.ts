@@ -21,6 +21,10 @@ export interface UserState {
 	items: number[]
 	step: number
 }
+export interface CalcReceivedData {
+	items: number[]
+	step: number
+}
 
 export interface CalcState {
 	items: number[]
@@ -35,6 +39,7 @@ export interface CalcState {
 
 interface FetchCurrentStateAction {
 	type: CalcActionTypes.FETCH_CURRENT_STATE
+	payload: string
 }
 
 interface FetchCurrentStateSuccessAction {
@@ -49,11 +54,12 @@ interface FetchCurrentStateErrorAction {
 
 interface SwitchToConfirmAction {
 	type: CalcActionTypes.SWITCH_TO_CONFIRM
+	payload: { items: number[]; token: string | null }
 }
 
 interface SwitchToConfirmSuccessAction {
 	type: CalcActionTypes.SWITCH_TO_CONFIRM_SUCCESS
-	payload: UserState
+	payload: CalcReceivedData
 }
 
 interface SwitchToConfirmErrorAction {

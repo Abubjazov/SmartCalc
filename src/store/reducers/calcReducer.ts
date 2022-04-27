@@ -1,6 +1,8 @@
 import { nanoid } from 'nanoid'
 import { CalcAction, CalcActionTypes, CalcState } from '../../interfaces'
 
+// const authData = localStorage.getItem('smartcalc_token')
+
 export const initialState: CalcState = {
 	items: [],
 	inputItems: [
@@ -32,6 +34,24 @@ export const calcReducer = (
 			}
 
 		case CalcActionTypes.FETCH_CURRENT_STATE_ERROR:
+			return {
+				...state,
+				status: 'error',
+				error: action.payload,
+			}
+
+		case CalcActionTypes.SWITCH_TO_CONFIRM:
+			return { ...state, status: 'loading', error: null }
+
+		case CalcActionTypes.SWITCH_TO_CONFIRM_SUCCESS:
+			return {
+				...state,
+				status: 'waiting',
+				items: action.payload.items,
+				step: action.payload.step,
+			}
+
+		case CalcActionTypes.SWITCH_TO_CONFIRM_ERROR:
 			return {
 				...state,
 				status: 'error',

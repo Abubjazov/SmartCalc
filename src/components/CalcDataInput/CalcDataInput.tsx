@@ -1,14 +1,23 @@
 import { nanoid } from 'nanoid'
-import { NavLink } from 'react-router-dom'
 
 import { useActions } from '../../hooks/useActions'
 import { useTypedSelector } from '../../hooks/useTypedSelector'
+import { InputItem } from '../../interfaces'
 
 import './CalcDataInput.scss'
 
 export const CalcDataInput = (): JSX.Element => {
 	const { inputItems } = useTypedSelector(state => state.calc)
-	const { addInputItem, changeInputItem, removeInputItem } = useActions()
+	const { token } = useTypedSelector(state => state.auth)
+	const {
+		addInputItem,
+		changeInputItem,
+		removeInputItem,
+		switchToConfirmAction,
+	} = useActions()
+
+	const convertArray = (arr: InputItem[]): number[] =>
+		arr.map(item => +item.value)
 
 	return (
 		<div className='calc-data-input'>
@@ -49,7 +58,11 @@ export const CalcDataInput = (): JSX.Element => {
 				</div>
 			) : null}
 
-			<button>Далее</button>
+			<button
+				onClick={() => switchToConfirmAction(convertArray(inputItems), token)}
+			>
+				Далее
+			</button>
 		</div>
 	)
 }

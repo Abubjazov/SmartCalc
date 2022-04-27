@@ -17,6 +17,8 @@ export const fetchToken = (authData: AuthData) => {
 				type: AuthActionTypes.FETCH_TOKEN_SUCCESS,
 				payload: response.data,
 			})
+
+			localStorage.setItem('smartcalc_token', JSON.stringify(response.data))
 		} catch (error) {
 			dispatch({
 				type: AuthActionTypes.FETCH_TOKEN_ERROR,
