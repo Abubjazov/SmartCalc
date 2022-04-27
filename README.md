@@ -1,9 +1,9 @@
 # Smart Calc - простой онлайн калькулятор.
 
-Простое онлайн приложение на основе React, Redux и Typescript.
+###Простое онлайн приложение на основе React, Redux и Typescript.
 
-**Demo:**
-Github Pages: https://abubjazov.github.io/SmartCalc/
+**Demo:**<br>
+https://abubjazov.github.io/SmartCalc/
 
 **Логин и пароль для Demo:**<br>
 `login: test@test.com`<br>
