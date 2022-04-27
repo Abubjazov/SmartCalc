@@ -1,11 +1,14 @@
 import { nanoid } from 'nanoid'
-import { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+
+import { useActions } from '../../hooks/useActions'
+import { useTypedSelector } from '../../hooks/useTypedSelector'
 
 import './CalcDataResult.scss'
 
 export const CalcDataResult = (): JSX.Element => {
-	const [items] = useState<number[]>([10, 11, 9])
+	const { items, summary } = useTypedSelector(state => state.calc)
+	const { token } = useTypedSelector(state => state.auth)
+	const { resetToDataInput, resetToNewCalculation } = useActions()
 
 	return (
 		<div className='calc-data-result'>
@@ -19,11 +22,13 @@ export const CalcDataResult = (): JSX.Element => {
 				))}
 			</ul>
 
-			<h2>Сумма: 39</h2>
+			<h2>Сумма: {summary}</h2>
 
 			<div className='calc-data-result-footer'>
-				<NavLink to='/smartcalc/calc'>Назад</NavLink>
-				<NavLink to='/smartcalc/calc'>Новый расчёт</NavLink>
+				<button onClick={() => resetToDataInput(token)}>Ввод данных</button>
+				<button onClick={() => resetToNewCalculation(token)}>
+					Новый расчёт
+				</button>
 			</div>
 		</div>
 	)

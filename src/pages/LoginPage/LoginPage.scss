@@ -10,9 +10,15 @@
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr;
+		justify-content: center;
+		align-items: center;
 
 		@media (max-width: 900px) {
 			padding: 6vh 0 0 0;
+		}
+
+		svg {
+			justify-self: center;
 		}
 
 		a {

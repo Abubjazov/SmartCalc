@@ -32,13 +32,13 @@
 	.header-menu {
 		ul {
 			display: flex;
-			width: 100px;
 			justify-content: space-between;
 			font-weight: 300;
 			font-size: 18px;
 			line-height: 18px;
 
 			a {
+				margin-left: 10px;
 				color: $white;
 				text-decoration: none;
 				transition: all 0.1s linear;

@@ -12,6 +12,22 @@
 		color: $grey;
 	}
 
+	button {
+		margin-top: 30px;
+		padding: 0 13px;
+		border: none;
+		border-radius: 20px;
+		min-width: 100px;
+		height: 40px;
+		text-align: center;
+		font-size: 16px;
+		line-height: 18px;
+		background-color: $main-color;
+		color: $white;
+		transition: all 0.1s linear;
+		cursor: pointer;
+	}
+
 	ul {
 		margin-top: 13px;
 		justify-self: center;

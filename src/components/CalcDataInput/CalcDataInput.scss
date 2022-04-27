@@ -40,10 +40,21 @@
 		border-radius: 50px;
 	}
 
-	a {
-		margin-top: 0;
-		justify-self: center;
+	button {
+		margin-top: 30px;
+		border: none;
+		border-radius: 20px;
+		width: 100px;
+		height: 40px;
+		text-align: center;
+		font-size: 18px;
+		line-height: 18px;
+		background-color: $main-color;
+		color: $white;
+		transition: all 0.1s linear;
+		cursor: pointer;
 	}
+
 	input {
 		justify-self: start;
 	}
