@@ -5,6 +5,10 @@
 **Demo:**
 Github Pages: https://abubjazov.github.io/SmartCalc/
 
+**Логин и пароль для Demo:**
+login: "test@test.com"
+password: "password"
+
 **На данный момент приложение имеет 3 реализованных раздела:**
 
 **1) Главная страница** - первое что видит пользователь.
