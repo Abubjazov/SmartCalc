@@ -1,5 +1,3 @@
-import { Helmet } from 'react-helmet'
-
 export const Spinner = (): JSX.Element => {
 	return (
 		<svg
@@ -9,9 +7,6 @@ export const Spinner = (): JSX.Element => {
 			viewBox='0 0 100 100'
 			preserveAspectRatio='xMidYMid'
 		>
-			<Helmet>
-				<title>Выполнение...</title>
-			</Helmet>
 			<path
 				fill='none'
 				stroke='#3b3b3b'
