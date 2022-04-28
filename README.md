@@ -25,7 +25,7 @@ https://abubjazov.github.io/SmartCalc/
 
 ## Отчеты Lighthouse
 
-**Main page Desktop**
+**Страница калькулятора Desktop**
 ![LIGHTHOUSE_REPORT](docs/lighthouse_desctop.jpg)
 
 ## Стек технологий
