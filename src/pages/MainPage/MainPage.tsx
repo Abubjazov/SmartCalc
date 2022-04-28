@@ -12,19 +12,19 @@ export const MainPage = (): JSX.Element => {
 
 			<div className='container'>
 				<div className='calc-info'>
-					<h1>Smart Calc - простой онлайн калькулятор.</h1>
+					<h2>Smart Calc - простой онлайн калькулятор.</h2>
 					<hr />
 					<br />
 					Smart C - простое онлайн приложение на основе React, Redux и
 					Typescript.
 					<br />
 					<br />
-					<h2>Логин и пароль для Demo:</h2>
+					<h3>Логин и пароль для Demo:</h3>
 					<br />
 					login: test@test.com <br /> password: password
 					<br />
 					<br />
-					<h2>На данный момент приложение имеет 3 реализованных раздела:</h2>
+					<h3>На данный момент приложение имеет 3 реализованных раздела:</h3>
 					<br />
 					-Главная страница - первое что видит пользователь.
 					<br />

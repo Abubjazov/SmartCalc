@@ -40,7 +40,7 @@ export const Header = (): JSX.Element => {
 							<NavLink
 								aria-label='Go to login page'
 								to='/smartcalc/login'
-								style={({ isActive }) => ({ color: isActive ? '#3b3b3b' : '' })}
+								style={({ isActive }) => ({ color: isActive ? '#fa8c06' : '' })}
 							>
 								Авторизация
 							</NavLink>
