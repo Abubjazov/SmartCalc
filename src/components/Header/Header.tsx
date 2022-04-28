@@ -19,7 +19,7 @@ export const Header = (): JSX.Element => {
 							aria-label='Go to main page'
 							end
 							to='/smartcalc/'
-							style={({ isActive }) => ({ color: isActive ? '#3b3b3b' : '' })}
+							style={({ isActive }) => ({ color: isActive ? '#fa8c06' : '' })}
 						>
 							Главная
 						</NavLink>
@@ -30,7 +30,7 @@ export const Header = (): JSX.Element => {
 							<NavLink
 								aria-label='Go to calc page'
 								to='/smartcalc/calc'
-								style={({ isActive }) => ({ color: isActive ? '#3b3b3b' : '' })}
+								style={({ isActive }) => ({ color: isActive ? '#fa8c06' : '' })}
 							>
 								Калькулятор
 							</NavLink>

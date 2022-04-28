@@ -9,7 +9,7 @@
 	justify-items: center;
 
 	h2 {
-		color: $grey;
+		color: $main-color;
 	}
 
 	button {
@@ -26,6 +26,10 @@
 		color: $white;
 		transition: all 0.1s linear;
 		cursor: pointer;
+
+		&:hover {
+			box-shadow: 1px 1px 10px $grey;
+		}
 	}
 
 	ul {

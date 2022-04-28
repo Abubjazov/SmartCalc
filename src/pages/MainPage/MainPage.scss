@@ -31,6 +31,10 @@
 			text-decoration: none;
 			transition: all 0.1s linear;
 
+			&:hover {
+				box-shadow: 1px 1px 10px $grey;
+			}
+
 			@media (max-width: 900px) {
 				align-self: flex-end;
 			}
