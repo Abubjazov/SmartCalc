@@ -28,6 +28,9 @@ https://abubjazov.github.io/SmartCalc/
 **Страница калькулятора Desktop**
 ![LIGHTHOUSE_REPORT](docs/lighthouse_desctop.jpg)
 
+**Страница калькулятора Mobile**
+![LIGHTHOUSE_REPORT](docs/lighthouse_mobile.jpg)
+
 ## Стек технологий
 
 ```
