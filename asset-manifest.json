@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/SmartCalc/static/css/main.f434856b.css",
-    "main.js": "/SmartCalc/static/js/main.c3b28ce8.js",
+    "main.js": "/SmartCalc/static/js/main.a0ba0216.js",
     "static/media/Error.gif": "/SmartCalc/static/media/Error.e96c41240b15f4b53d4d.gif",
     "index.html": "/SmartCalc/index.html",
     "main.f434856b.css.map": "/SmartCalc/static/css/main.f434856b.css.map",
-    "main.c3b28ce8.js.map": "/SmartCalc/static/js/main.c3b28ce8.js.map"
+    "main.a0ba0216.js.map": "/SmartCalc/static/js/main.a0ba0216.js.map"
   },
   "entrypoints": [
     "static/css/main.f434856b.css",
-    "static/js/main.c3b28ce8.js"
+    "static/js/main.a0ba0216.js"
   ]
 }
