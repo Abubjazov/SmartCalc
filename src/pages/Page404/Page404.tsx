@@ -1,3 +1,5 @@
+import { Helmet } from 'react-helmet'
+
 import { ErrorGif } from '../../components'
 
 export const Page404 = (): JSX.Element => (
@@ -6,6 +8,9 @@ export const Page404 = (): JSX.Element => (
 			paddingTop: 200,
 		}}
 	>
+		<Helmet>
+			<title>404</title>
+		</Helmet>
 		<ErrorGif />
 		<p
 			tabIndex={0}

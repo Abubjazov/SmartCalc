@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 
 import { useTypedSelector } from '../../hooks/useTypedSelector'
 
@@ -8,6 +9,9 @@ export const MainPage = (): JSX.Element => {
 	const { token } = useTypedSelector(state => state.auth)
 	return (
 		<main className='main-page'>
+			<Helmet>
+				<title>Главная</title>
+			</Helmet>
 			{/* <PageMarker pageName='main' /> */}
 
 			<div className='container'>

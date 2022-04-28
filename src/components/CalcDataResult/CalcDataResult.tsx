@@ -1,4 +1,5 @@
 import { nanoid } from 'nanoid'
+import { Helmet } from 'react-helmet'
 
 import { useActions } from '../../hooks/useActions'
 import { useTypedSelector } from '../../hooks/useTypedSelector'
@@ -12,6 +13,9 @@ export const CalcDataResult = (): JSX.Element => {
 
 	return (
 		<div className='calc-data-result'>
+			<Helmet>
+				<title>Результаты</title>
+			</Helmet>
 			<h1>Результаты расчёта</h1>
 
 			<ul>
