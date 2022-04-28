@@ -1,5 +1,7 @@
 import { nanoid } from 'nanoid'
 import { useActions } from '../../hooks/useActions'
+import { Helmet } from 'react-helmet'
+
 import { useTypedSelector } from '../../hooks/useTypedSelector'
 
 import './CalcDataConfirm.scss'
@@ -15,6 +17,9 @@ export const CalcDataConfirm = (): JSX.Element => {
 
 	return (
 		<div className='calc-data-confirm'>
+			<Helmet>
+				<title>Подтверждение</title>
+			</Helmet>
 			<h1>Подтвердите данные</h1>
 			<div className='calc-data-confirm-search'>
 				<input

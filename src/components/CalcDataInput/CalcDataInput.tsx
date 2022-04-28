@@ -1,4 +1,5 @@
 import { nanoid } from 'nanoid'
+import { Helmet } from 'react-helmet'
 
 import { useActions } from '../../hooks/useActions'
 import { useTypedSelector } from '../../hooks/useTypedSelector'
@@ -17,6 +18,9 @@ export const CalcDataInput = (): JSX.Element => {
 
 	return (
 		<div className='calc-data-input'>
+			<Helmet>
+				<title>Ввод данных</title>
+			</Helmet>
 			<h1>Введите данные</h1>
 			{inputItems.map((item, index) =>
 				index < 2 ? (
