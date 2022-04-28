@@ -40,6 +40,14 @@ export const calcReducer = (
 								{ key: 'a13key1', value: '' },
 								{ key: 'a13key2', value: '' },
 						  ],
+
+				summary:
+					action.payload.items === []
+						? 0
+						: action.payload.items.reduce(
+								(previousValue, item) => previousValue + item,
+								0
+						  ),
 			}
 
 		case CalcActionTypes.FETCH_CURRENT_STATE_ERROR:

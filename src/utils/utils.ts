@@ -11,14 +11,14 @@ const splitString = (item: string, step: number): string[] => {
 	return result
 }
 
-const capitalizeFirstLetter = (string: string): string =>
-	string.charAt(0).toUpperCase() + string.slice(1)
-
 const maskString = (string: string): string => {
 	const stringArr = string.split('.')
 
 	return stringArr[0][0] + '***.' + stringArr[1]
 }
+
+const capitalizeFirstLetter = (string: string): string =>
+	string.charAt(0).toUpperCase() + string.slice(1)
 
 export const matchCheck = (item: number, value: string): boolean => {
 	const stringItem = item.toString()
