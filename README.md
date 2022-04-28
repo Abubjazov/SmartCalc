@@ -23,6 +23,11 @@ https://abubjazov.github.io/SmartCalc/
 
 ![LANDING](docs/calc.jpg)
 
+## Отчеты Lighthouse
+
+**Main page Desktop**
+![LIGHTHOUSE_REPORT](docs/lighthouse_desctop.jpg)
+
 ## Стек технологий
 
 ```
