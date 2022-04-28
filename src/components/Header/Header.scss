@@ -8,7 +8,7 @@
 	align-items: center;
 	justify-content: space-between;
 	width: 100vw;
-	min-height: 10vh;
+	min-height: 7vh;
 	padding: 0 3vw;
 	z-index: 10;
 
@@ -17,11 +17,16 @@
 	}
 
 	h1 {
-		font-size: 21px;
+		font-size: 31px;
 		line-height: 31px;
 		font-weight: 300;
 		position: relative;
 		color: $white;
+
+		@media (max-width: 900px) {
+			font-size: 21px;
+			line-height: 21px;
+		}
 
 		span {
 			font-weight: 700;

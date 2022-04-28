@@ -26,4 +26,18 @@
 		border: none;
 		border-bottom: 2px solid $main-color;
 	}
+
+	p {
+		position: absolute;
+		top: 7vh;
+		right: 1vw;
+
+		@media (min-width: 790px) {
+			top: 5.5vh;
+		}
+
+		@media (min-width: 900px) {
+			top: 8vh;
+		}
+	}
 }

@@ -1,7 +1,7 @@
 import { nanoid } from 'nanoid'
 
 import { CalcAction, CalcActionTypes, CalcState } from '../../interfaces'
-import { matchCheck } from '../../utils/utils'
+import { createInputItem, matchCheck } from '../../utils/utils'
 
 export const initialState: CalcState = {
 	items: [],
@@ -33,6 +33,13 @@ export const calcReducer = (
 				items: action.payload.items,
 				sortedItems: action.payload.items,
 				step: action.payload.step,
+				inputItems:
+					action.payload.items === []
+						? action.payload.items.map(item => createInputItem(item))
+						: [
+								{ key: 'a13key1', value: '' },
+								{ key: 'a13key2', value: '' },
+						  ],
 			}
 
 		case CalcActionTypes.FETCH_CURRENT_STATE_ERROR:
