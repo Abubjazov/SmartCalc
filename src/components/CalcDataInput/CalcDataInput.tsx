@@ -26,17 +26,21 @@ export const CalcDataInput = (): JSX.Element => {
 				index < 2 ? (
 					<input
 						key={item.key}
-						type='number'
+						type='text'
 						placeholder='Введите число'
-						onChange={e => changeInputItem(item.key, e.target.value)}
+						onChange={e =>
+							changeInputItem(item.key, e.target.value.replace(/\D/, ''))
+						}
 						value={item.value}
 					/>
 				) : (
 					<div className='added-item' key={item.key}>
 						<input
-							type='number'
+							type='text'
 							placeholder='Введите число'
-							onChange={e => changeInputItem(item.key, e.target.value)}
+							onChange={e =>
+								changeInputItem(item.key, e.target.value.replace(/\D/, ''))
+							}
 							value={item.value}
 						/>
 						<div
