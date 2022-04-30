@@ -51,7 +51,7 @@ export const Login = (): JSX.Element => {
 					})
 				}
 			>
-				Авторизоваться
+				Войти
 			</button>
 		</div>
 	)

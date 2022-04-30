@@ -39,6 +39,29 @@ export const authReducer = (
 				error: action.payload,
 			}
 
+		case AuthActionTypes.DELETE_TOKEN:
+			return {
+				...state,
+				status: 'loading',
+				error: null,
+			}
+
+		case AuthActionTypes.DELETE_TOKEN_SUCCESS:
+			return {
+				...state,
+				status: 'waiting',
+				token: null,
+				name: '',
+				email: '',
+			}
+
+		case AuthActionTypes.DELETE_TOKEN_ERROR:
+			return {
+				...state,
+				status: 'error',
+				error: action.payload,
+			}
+
 		default:
 			return state
 	}

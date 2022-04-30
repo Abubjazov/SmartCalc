@@ -6,7 +6,7 @@
 	grid-template-rows: 50px 38px 38px;
 	grid-row: auto;
 	row-gap: 10px;
-	justify-items: center;
+	justify-items: left;
 
 	.add-item {
 		justify-self: start;
@@ -14,16 +14,17 @@
 		height: 30px;
 		padding-left: 6px;
 		padding-top: 1px;
-		margin-left: 13px;
 		background-color: $main-color;
 		color: $white;
 		font-size: 30px;
 		line-height: 27px;
 		border-radius: 50px;
+		outline: none;
 		cursor: pointer;
 
-		&:hover {
-			box-shadow: 1px 1px 10px $grey;
+		&:hover,
+		&:focus {
+			background-color: $main-color-hover;
 		}
 	}
 
@@ -43,10 +44,12 @@
 		font-size: 30px;
 		line-height: 19px;
 		border-radius: 50px;
+		outline: none;
 		cursor: pointer;
 
-		&:hover {
-			box-shadow: 1px 1px 10px $main-color;
+		&:hover,
+		&:focus {
+			background-color: $deep-red;
 		}
 	}
 
@@ -62,10 +65,12 @@
 		background-color: $main-color;
 		color: $white;
 		transition: all 0.1s linear;
+		outline: none;
 		cursor: pointer;
 
-		&:hover {
-			box-shadow: 1px 1px 10px $grey;
+		&:hover,
+		&:focus {
+			background-color: $main-color-hover;
 		}
 	}
 

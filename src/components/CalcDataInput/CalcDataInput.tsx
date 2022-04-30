@@ -44,8 +44,10 @@ export const CalcDataInput = (): JSX.Element => {
 							value={item.value}
 						/>
 						<div
+							tabIndex={0}
 							className='remove-item'
 							onClick={() => removeInputItem(item.key)}
+							// onKeyDown={() => removeInputItem(item.key)}
 						>
 							-
 						</div>
@@ -55,8 +57,10 @@ export const CalcDataInput = (): JSX.Element => {
 
 			{inputItems.length < 10 ? (
 				<div
+					tabIndex={0}
 					className='add-item'
 					onClick={() => addInputItem({ key: nanoid(), value: '' })}
+					// onKeyDown={() => addInputItem({ key: nanoid(), value: '' })}
 				>
 					+
 				</div>
