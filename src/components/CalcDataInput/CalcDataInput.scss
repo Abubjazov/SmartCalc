@@ -7,6 +7,8 @@
 	grid-row: auto;
 	row-gap: 10px;
 	justify-items: left;
+	animation-name: opacity;
+	animation-duration: 700ms;
 
 	.add-item {
 		justify-self: start;
@@ -32,6 +34,8 @@
 	.added-item {
 		margin-bottom: 13px;
 		display: flex;
+		animation-name: opacity;
+		animation-duration: 700ms;
 	}
 
 	.remove-item {
@@ -56,6 +60,7 @@
 	}
 
 	button {
+		justify-self: center;
 		margin-top: 30px;
 		border: none;
 		border-radius: 20px;

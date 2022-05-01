@@ -7,6 +7,8 @@
 	grid-row: auto;
 	row-gap: 10px;
 	justify-items: center;
+	animation-name: opacity;
+	animation-duration: 700ms;
 
 	h2 {
 		color: $black;

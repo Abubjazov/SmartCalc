@@ -42,6 +42,7 @@ export const CalcDataInput = (): JSX.Element => {
 								changeInputItem(item.key, e.target.value.replace(/\D/, ''))
 							}
 							value={item.value}
+							required
 						/>
 						<div
 							tabIndex={0}

@@ -3,6 +3,8 @@
 .page-404 {
 	background: $main-background;
 	padding-top: 200px;
+	animation-name: opacity;
+	animation-duration: 700ms;
 
 	p {
 		text-align: 'center';
