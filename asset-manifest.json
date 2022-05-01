@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/SmartCalc/static/css/main.ccefd8c3.css",
+    "main.css": "/SmartCalc/static/css/main.036927cf.css",
     "main.js": "/SmartCalc/static/js/main.1812dc24.js",
     "static/media/Error.gif": "/SmartCalc/static/media/Error.e96c41240b15f4b53d4d.gif",
     "static/media/500_normal.woff2.txt": "/SmartCalc/static/media/500_normal.woff2.2f9c8bc6d4b65f978f0e.txt",
@@ -8,11 +8,11 @@
     "static/media/300_normal.woff2.txt": "/SmartCalc/static/media/300_normal.woff2.e73dacc9386c43e0d6e0.txt",
     "static/media/900_normal.woff2.txt": "/SmartCalc/static/media/900_normal.woff2.31a155bb0dd114cfd740.txt",
     "index.html": "/SmartCalc/index.html",
-    "main.ccefd8c3.css.map": "/SmartCalc/static/css/main.ccefd8c3.css.map",
+    "main.036927cf.css.map": "/SmartCalc/static/css/main.036927cf.css.map",
     "main.1812dc24.js.map": "/SmartCalc/static/js/main.1812dc24.js.map"
   },
   "entrypoints": [
-    "static/css/main.ccefd8c3.css",
+    "static/css/main.036927cf.css",
     "static/js/main.1812dc24.js"
   ]
 }
