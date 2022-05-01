@@ -17,10 +17,6 @@
 		row-gap: 10px;
 		justify-items: center;
 
-		@media (max-width: 900px) {
-			padding: 6vh 1vw 3vh 1vw;
-		}
-
 		@media (max-width: 790px) {
 			grid-template-columns: 1fr;
 			align-items: center;

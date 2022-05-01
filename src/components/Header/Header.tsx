@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { useActions } from '../../hooks/useActions'
 
 import { useTypedSelector } from '../../hooks/useTypedSelector'
@@ -11,6 +11,8 @@ export const Header = (): JSX.Element => {
 	const { token } = useTypedSelector(state => state.auth)
 
 	const { deleteToken } = useActions()
+
+	const navigate = useNavigate()
 
 	return (
 		<header className='header'>
@@ -35,9 +37,7 @@ export const Header = (): JSX.Element => {
 			<div className='in-out'>
 				{token && <button onClick={deleteToken}>Выйти</button>}
 				{!token && (
-					<NavLink aria-label='Войти' to='/smartcalc/login'>
-						Войти
-					</NavLink>
+					<button onClick={() => navigate('/smartcalc/login')}>Войти</button>
 				)}
 			</div>
 		</header>

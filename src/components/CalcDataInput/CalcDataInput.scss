@@ -17,6 +17,7 @@
 		background-color: $main-color;
 		color: $white;
 		font-size: 30px;
+		font-weight: 300;
 		line-height: 27px;
 		border-radius: 50px;
 		outline: none;
@@ -37,11 +38,12 @@
 		margin-left: 10px;
 		width: 24px;
 		height: 24px;
-		padding-left: 7px;
-		padding-top: 0;
+		padding-left: 5px;
+		padding-top: 1px;
 		background-color: $red;
 		color: $white;
 		font-size: 30px;
+		font-weight: 300;
 		line-height: 19px;
 		border-radius: 50px;
 		outline: none;
@@ -60,8 +62,8 @@
 		width: 100px;
 		height: 40px;
 		text-align: center;
-		font-size: 18px;
-		line-height: 18px;
+		font-size: 14px;
+		line-height: 14px;
 		background-color: $main-color;
 		color: $white;
 		transition: all 0.1s linear;

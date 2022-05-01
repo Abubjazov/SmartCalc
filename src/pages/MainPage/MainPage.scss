@@ -8,7 +8,7 @@
 	);
 
 	.container {
-		padding: 11vh 0 1vh 0;
+		padding: 13vh 0 1vh 0;
 		min-height: 100vh;
 		max-width: calc(100vw - 2vw);
 		display: grid;
@@ -17,19 +17,15 @@
 		row-gap: 10px;
 		justify-items: center;
 
-		@media (max-width: 900px) {
-			padding: 6vh 1vw 3vh 1vw;
-		}
-
 		a {
+			margin-top: 70px;
 			border-radius: 20px;
-			padding: 0 13px;
-			padding-top: 11px;
+			padding: 13px;
 			min-width: 100px;
 			height: 40px;
 			text-align: center;
-			font-size: 18px;
-			line-height: 18px;
+			font-size: 14px;
+			line-height: 14px;
 			background-color: $main-color;
 			color: $white;
 			text-decoration: none;
@@ -38,10 +34,6 @@
 			&:hover,
 			&:focus {
 				background-color: $main-color-hover;
-			}
-
-			@media (max-width: 900px) {
-				align-self: flex-end;
 			}
 		}
 

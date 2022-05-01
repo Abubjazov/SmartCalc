@@ -2,7 +2,6 @@ import { NavLink } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 
 import { useTypedSelector } from '../../hooks/useTypedSelector'
-
 import { Info } from '../../components'
 
 import './MainPage.scss'
@@ -14,14 +13,13 @@ export const MainPage = (): JSX.Element => {
 			<Helmet>
 				<title>Главная</title>
 			</Helmet>
-			{/* <PageMarker pageName='main' /> */}
 
 			<div className='container'>
 				<Info />
 				{token ? (
 					<NavLink to='/smartcalc/calc'>Калькулятор</NavLink>
 				) : (
-					<NavLink to='/smartcalc/login'>Авторизация</NavLink>
+					<NavLink to='/smartcalc/login'>Войти</NavLink>
 				)}
 			</div>
 		</main>

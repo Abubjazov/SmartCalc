@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import { useActions } from '../../hooks/useActions'
-
 import bcrypt from 'bcryptjs'
 
-import './Login.scss'
 import { useTypedSelector } from '../../hooks/useTypedSelector'
+
+import './Login.scss'
 
 export const Login = (): JSX.Element => {
 	const [email, setEmail] = useState<string>('')
