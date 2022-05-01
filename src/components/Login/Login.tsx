@@ -36,9 +36,7 @@ export const Login = (): JSX.Element => {
 				value={password}
 			/>
 			{status === 'error' && error?.includes('Authentication error!') ? (
-				<p style={{ color: 'red', fontSize: 14 }}>
-					Неправильный логин или пароль
-				</p>
+				<p style={{ color: 'red', fontSize: 14 }}>Неверный логин или пароль</p>
 			) : null}
 			<button
 				onClick={() =>
