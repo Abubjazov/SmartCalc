@@ -127,6 +127,7 @@ export const calcReducer = (
 				...state,
 				status: 'waiting',
 				items: action.payload.items,
+				searchString: '',
 				sortedItems: action.payload.items,
 				step: action.payload.step,
 				inputItems: [
@@ -150,6 +151,7 @@ export const calcReducer = (
 				...state,
 				status: 'waiting',
 				items: action.payload.items,
+				searchString: '',
 				sortedItems: action.payload.items,
 				step: action.payload.step,
 				summary: action.payload.summary,
