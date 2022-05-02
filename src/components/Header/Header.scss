@@ -6,6 +6,7 @@
 	background: $main-background;
 	display: grid;
 	grid-template-columns: 110px auto auto;
+	grid-template-areas: 'logo menu button';
 	column-gap: 20px;
 	align-items: center;
 	width: 100vw;
@@ -14,13 +15,65 @@
 	z-index: 10;
 	animation-name: opacity;
 	animation-duration: 700ms;
+	box-shadow: 1px 1px rgba(238, 238, 238, 0.8);
 
-	// @media (max-width: 900px) {
-	// 	min-height: 5vh;
-	// }
+	@media (max-width: 790px) {
+		grid-template-columns: 0.7fr 110px 1fr;
+		grid-template-areas: 'menu logo button';
+		align-items: flex-start;
+		overflow: hidden;
+	}
+
+	.hamburger {
+		display: none;
+
+		@media (max-width: 790px) {
+			display: block;
+			position: absolute;
+			left: 25px;
+			top: 25px;
+			width: 24px;
+			height: 12px;
+
+			span {
+				display: block;
+				height: 2px;
+				width: 100%;
+				background-color: $black;
+				margin-bottom: 2px;
+				transition: all 0.3s;
+			}
+
+			&_active {
+				span {
+					margin-bottom: -2px;
+					&:nth-child(1) {
+						transform: translateY(3px) rotate(-45deg);
+					}
+					&:nth-child(2) {
+						display: none;
+					}
+					&:nth-child(3) {
+						transform: translateY(3px) rotate(45deg);
+					}
+				}
+			}
+		}
+	}
+
+	.logo {
+		grid-area: logo;
+	}
 
 	.header-menu {
 		justify-self: start;
+		grid-area: menu;
+		height: 4vh;
+		transition: all 0.3s;
+
+		&_active {
+			height: 17vh;
+		}
 
 		ul {
 			display: flex;
@@ -28,6 +81,17 @@
 			font-weight: 500;
 			font-size: 16px;
 			line-height: 16px;
+
+			@media (max-width: 790px) {
+				flex-direction: column;
+				position: absolute;
+				left: 10px;
+				top: 70px;
+
+				li {
+					margin-bottom: 15px;
+				}
+			}
 
 			a {
 				margin-left: 10px;
@@ -52,6 +116,7 @@
 	}
 
 	button {
+		grid-area: button;
 		padding: 0 13px;
 		border: 1px solid $gray;
 		border-radius: 20px;
