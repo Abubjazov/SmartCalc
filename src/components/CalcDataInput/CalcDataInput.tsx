@@ -1,4 +1,5 @@
 import { nanoid } from 'nanoid'
+import { KeyboardEvent } from 'react'
 import { Helmet } from 'react-helmet'
 
 import { useActions } from '../../hooks/useActions'
@@ -15,6 +16,18 @@ export const CalcDataInput = (): JSX.Element => {
 
 	const convertArray = (arr: InputItem[]): number[] =>
 		arr.map(item => +item.value)
+
+	const removeItem = (key: KeyboardEvent, itemKey: string) => {
+		if (key.code === 'Space' || key.code === 'Enter') {
+			removeInputItem(itemKey)
+		}
+	}
+
+	const addItem = (key: KeyboardEvent) => {
+		if (key.code === 'Space' || key.code === 'Enter') {
+			addInputItem({ key: nanoid(), value: '' })
+		}
+	}
 
 	return (
 		<div className='calc-data-input'>
@@ -47,7 +60,7 @@ export const CalcDataInput = (): JSX.Element => {
 							tabIndex={0}
 							className='remove-item'
 							onClick={() => removeInputItem(item.key)}
-							// onKeyDown={() => removeInputItem(item.key)}
+							onKeyDown={(key: KeyboardEvent) => removeItem(key, item.key)}
 						>
 							-
 						</div>
@@ -60,7 +73,7 @@ export const CalcDataInput = (): JSX.Element => {
 					tabIndex={0}
 					className='add-item'
 					onClick={() => addInputItem({ key: nanoid(), value: '' })}
-					// onKeyDown={() => addInputItem({ key: nanoid(), value: '' })}
+					onKeyDown={(key: KeyboardEvent) => addItem(key)}
 				>
 					+
 				</div>
