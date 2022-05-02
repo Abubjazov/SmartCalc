@@ -131,6 +131,10 @@
 		outline: none;
 		cursor: pointer;
 
+		@media (max-width: 790px) {
+			margin-top: 0.7vh;
+		}
+
 		&:hover,
 		&:focus {
 			border: 1px solid $deep-gray;
