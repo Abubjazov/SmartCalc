@@ -1,6 +1,6 @@
-# Smart Calc - простой онлайн калькулятор.
+# Онлайн калькулятор `Smart Calc`.
 
-### Простое онлайн приложение на основе React, Redux и Typescript.
+### `SPA` на основе `React, Redux и Typescript`.
 
 **Demo:**<br>
 https://abubjazov.github.io/SmartCalc/
@@ -11,15 +11,15 @@ https://abubjazov.github.io/SmartCalc/
 
 **На данный момент приложение имеет 3 реализованных раздела:**
 
-**1) Главная страница** - первое что видит пользователь.
+**[Главная страница]** - первое что видит пользователь.
 
 ![LANDING](docs/main.jpg)
 
-**2) Страница ввода логина и пароля** - где пользователь уже зарегистрированный в системе может ввести свой логин и пароль и попасть на страницу "Калькулятор".
+**[Страница ввода логина и пароля]** - где пользователь уже зарегистрированный в системе может ввести свой логин и пароль и попасть на страницу "Калькулятор".
 
 ![LANDING](docs/login.jpg)
 
-**3) Страница калькулятора** - где пользователь может ввести данные и получить результат расчёта.
+**[Страница калькулятора]** - где пользователь может ввести данные и получить результат расчёта.
 
 ![LANDING](docs/calc.jpg)
 
@@ -28,19 +28,18 @@ https://abubjazov.github.io/SmartCalc/
 **Страница калькулятора Desktop**
 ![LIGHTHOUSE_REPORT](docs/lighthouse_desctop.jpg)
 
-**Страница калькулятора Mobile**
-![LIGHTHOUSE_REPORT](docs/lighthouse_mobile.jpg)
-
 ## Стек технологий
 
 ```
+TypeScript
 React
 React Router
+React Helmet
 Redux
 Redux Thunk
-TypeScript
 Axios
 Nanoid
+Bcryptjs
 SASS
 ```
 
