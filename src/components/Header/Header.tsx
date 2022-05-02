@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { useActions } from '../../hooks/useActions'
 
@@ -8,26 +9,57 @@ import { Logo } from '../Logo/Logo'
 import './Header.scss'
 
 export const Header = (): JSX.Element => {
+	const [active, setActive] = useState<boolean>(false)
+
 	const { token } = useTypedSelector(state => state.auth)
 
 	const { deleteToken } = useActions()
 
 	const navigate = useNavigate()
 
+	const hamburgerClickHandler = () => {
+		const windowInnerWidth: number = window.innerWidth
+
+		if (windowInnerWidth < 790) {
+			setActive(!active)
+		} else {
+			setActive(false)
+		}
+	}
+
 	return (
 		<header className='header'>
 			<Logo />
-			<nav className='header-menu'>
+			<nav
+				className={active ? 'header-menu header-menu_active' : 'header-menu'}
+			>
+				<div
+					className={active ? 'hamburger hamburger_active' : 'hamburger'}
+					onClick={hamburgerClickHandler}
+				>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
 				<ul>
 					<li>
-						<NavLink aria-label='На главную' end to='/smartcalc/'>
+						<NavLink
+							aria-label='На главную'
+							end
+							to='/smartcalc/'
+							onClick={hamburgerClickHandler}
+						>
 							Главная
 						</NavLink>
 					</li>
 
 					{token && (
 						<li>
-							<NavLink aria-label='Калькулятор' to='/smartcalc/calc'>
+							<NavLink
+								aria-label='Калькулятор'
+								to='/smartcalc/calc'
+								onClick={hamburgerClickHandler}
+							>
 								Калькулятор
 							</NavLink>
 						</li>
