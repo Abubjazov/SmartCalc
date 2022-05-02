@@ -1,29 +1,37 @@
 @import '../../variables';
 
 .calc-page {
-	background: $white;
+	background: linear-gradient(
+		180deg,
+		rgba(254, 254, 254, 1) 0%,
+		rgba(238, 238, 238, 1) 100%
+	);
+	animation-name: opacity;
+	animation-duration: 700ms;
 
 	.container {
-		padding: 11vh 0 1vh 0;
+		padding: 11vh 0 10vh 0;
 		min-height: 100vh;
 		max-width: calc(100vw - 2vw);
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		grid-auto-rows: 1fr;
+		grid-auto-rows: min-content;
 		row-gap: 10px;
 		justify-items: center;
-
-		@media (max-width: 900px) {
-			padding: 6vh 1vw 3vh 1vw;
-		}
 
 		@media (max-width: 790px) {
 			grid-template-columns: 1fr;
 			align-items: center;
+			grid-auto-rows: auto;
 
 			.calc-info {
 				display: none;
 			}
+		}
+
+		.calc-info {
+			background-color: $white;
+			border-radius: 10px;
 		}
 	}
 }

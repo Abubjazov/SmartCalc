@@ -26,22 +26,28 @@ export const CalcDataInput = (): JSX.Element => {
 				index < 2 ? (
 					<input
 						key={item.key}
-						type='number'
+						type='text'
 						placeholder='Введите число'
-						onChange={e => changeInputItem(item.key, e.target.value)}
+						onChange={e =>
+							changeInputItem(item.key, e.target.value.replace(/\D/, ''))
+						}
 						value={item.value}
 					/>
 				) : (
 					<div className='added-item' key={item.key}>
 						<input
-							type='number'
+							type='text'
 							placeholder='Введите число'
-							onChange={e => changeInputItem(item.key, e.target.value)}
+							onChange={e =>
+								changeInputItem(item.key, e.target.value.replace(/\D/, ''))
+							}
 							value={item.value}
 						/>
 						<div
+							tabIndex={0}
 							className='remove-item'
 							onClick={() => removeInputItem(item.key)}
+							// onKeyDown={() => removeInputItem(item.key)}
 						>
 							-
 						</div>
@@ -51,8 +57,10 @@ export const CalcDataInput = (): JSX.Element => {
 
 			{inputItems.length < 10 ? (
 				<div
+					tabIndex={0}
 					className='add-item'
 					onClick={() => addInputItem({ key: nanoid(), value: '' })}
+					// onKeyDown={() => addInputItem({ key: nanoid(), value: '' })}
 				>
 					+
 				</div>

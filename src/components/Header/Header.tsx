@@ -1,53 +1,45 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
+import { useActions } from '../../hooks/useActions'
+
 import { useTypedSelector } from '../../hooks/useTypedSelector'
+
+import { Logo } from '../Logo/Logo'
 
 import './Header.scss'
 
 export const Header = (): JSX.Element => {
 	const { token } = useTypedSelector(state => state.auth)
 
+	const { deleteToken } = useActions()
+
+	const navigate = useNavigate()
+
 	return (
 		<header className='header'>
-			<h1>
-				SMART<span>C</span>
-			</h1>
-
+			<Logo />
 			<nav className='header-menu'>
 				<ul>
 					<li>
-						<NavLink
-							aria-label='Go to main page'
-							end
-							to='/smartcalc/'
-							style={({ isActive }) => ({ color: isActive ? '#fa8c06' : '' })}
-						>
+						<NavLink aria-label='На главную' end to='/smartcalc/'>
 							Главная
 						</NavLink>
 					</li>
 
-					{token ? (
+					{token && (
 						<li>
-							<NavLink
-								aria-label='Go to calc page'
-								to='/smartcalc/calc'
-								style={({ isActive }) => ({ color: isActive ? '#fa8c06' : '' })}
-							>
+							<NavLink aria-label='Калькулятор' to='/smartcalc/calc'>
 								Калькулятор
-							</NavLink>
-						</li>
-					) : (
-						<li>
-							<NavLink
-								aria-label='Go to login page'
-								to='/smartcalc/login'
-								style={({ isActive }) => ({ color: isActive ? '#fa8c06' : '' })}
-							>
-								Авторизация
 							</NavLink>
 						</li>
 					)}
 				</ul>
 			</nav>
+			<div className='in-out'>
+				{token && <button onClick={deleteToken}>Выйти</button>}
+				{!token && (
+					<button onClick={() => navigate('/smartcalc/login')}>Войти</button>
+				)}
+			</div>
 		</header>
 	)
 }

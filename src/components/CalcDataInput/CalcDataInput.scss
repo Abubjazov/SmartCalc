@@ -6,7 +6,9 @@
 	grid-template-rows: 50px 38px 38px;
 	grid-row: auto;
 	row-gap: 10px;
-	justify-items: center;
+	justify-items: left;
+	animation-name: opacity;
+	animation-duration: 700ms;
 
 	.add-item {
 		justify-self: start;
@@ -14,62 +16,76 @@
 		height: 30px;
 		padding-left: 6px;
 		padding-top: 1px;
-		margin-left: 13px;
 		background-color: $main-color;
 		color: $white;
 		font-size: 30px;
+		font-weight: 300;
 		line-height: 27px;
 		border-radius: 50px;
+		outline: none;
 		cursor: pointer;
 
-		&:hover {
-			box-shadow: 1px 1px 10px $grey;
+		&:hover,
+		&:focus {
+			background-color: $main-color-hover;
 		}
 	}
 
 	.added-item {
 		margin-bottom: 13px;
 		display: flex;
+		animation-name: opacity;
+		animation-duration: 700ms;
 	}
 
 	.remove-item {
 		margin-left: 10px;
 		width: 24px;
 		height: 24px;
-		padding-left: 7px;
-		padding-top: 0;
+		padding-left: 5px;
+		padding-top: 1px;
 		background-color: $red;
 		color: $white;
 		font-size: 30px;
+		font-weight: 300;
 		line-height: 19px;
 		border-radius: 50px;
+		outline: none;
 		cursor: pointer;
 
-		&:hover {
-			box-shadow: 1px 1px 10px $main-color;
+		&:hover,
+		&:focus {
+			background-color: $deep-red;
 		}
 	}
 
 	button {
+		justify-self: center;
 		margin-top: 30px;
 		border: none;
 		border-radius: 20px;
 		width: 100px;
 		height: 40px;
 		text-align: center;
-		font-size: 18px;
-		line-height: 18px;
+		font-size: 14px;
+		line-height: 14px;
 		background-color: $main-color;
 		color: $white;
 		transition: all 0.1s linear;
+		outline: none;
 		cursor: pointer;
 
-		&:hover {
-			box-shadow: 1px 1px 10px $grey;
+		&:hover,
+		&:focus {
+			background-color: $main-color-hover;
 		}
 	}
 
 	input {
 		justify-self: start;
+	}
+
+	h1 {
+		justify-self: center;
 	}
 }

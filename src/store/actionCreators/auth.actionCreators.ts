@@ -27,3 +27,28 @@ export const fetchToken = (authData: AuthData) => {
 		}
 	}
 }
+
+export const deleteToken = () => {
+	return async (dispatch: Dispatch<AuthAction>) => {
+		try {
+			dispatch({ type: AuthActionTypes.DELETE_TOKEN })
+
+			localStorage.removeItem('smartcalc_token')
+
+			dispatch({
+				type: AuthActionTypes.DELETE_TOKEN_SUCCESS,
+			})
+		} catch (error) {
+			dispatch({
+				type: AuthActionTypes.FETCH_TOKEN_ERROR,
+				payload: `Delete token error!*${error}`,
+			})
+		}
+	}
+}
+
+export const clearError = () => {
+	return async (dispatch: Dispatch<AuthAction>) => {
+		dispatch({ type: AuthActionTypes.CLEAR_ERROR })
+	}
+}

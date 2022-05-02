@@ -3,51 +3,72 @@
 .header {
 	position: fixed;
 	top: 0;
-	background: $main-color;
-	display: flex;
+	background: $main-background;
+	display: grid;
+	grid-template-columns: 110px auto auto;
+	column-gap: 20px;
 	align-items: center;
-	justify-content: space-between;
 	width: 100vw;
-	min-height: 7vh;
-	padding: 0 3vw;
+	min-height: 5vh;
+	padding: 1vh 3vw;
 	z-index: 10;
+	animation-name: opacity;
+	animation-duration: 700ms;
 
-	@media (max-width: 900px) {
-		min-height: 5vh;
-	}
-
-	h1 {
-		font-size: 31px;
-		line-height: 31px;
-		font-weight: 300;
-		position: relative;
-		color: $white;
-
-		@media (max-width: 900px) {
-			font-size: 21px;
-			line-height: 21px;
-		}
-
-		span {
-			font-weight: 700;
-			color: $grey;
-		}
-	}
+	// @media (max-width: 900px) {
+	// 	min-height: 5vh;
+	// }
 
 	.header-menu {
+		justify-self: start;
+
 		ul {
 			display: flex;
 			justify-content: space-between;
-			font-weight: 300;
+			font-weight: 500;
 			font-size: 16px;
 			line-height: 16px;
 
 			a {
 				margin-left: 10px;
-				color: $white;
+				color: $black;
 				text-decoration: none;
+				outline: none;
 				transition: all 0.1s linear;
+
+				&:hover {
+					color: $main-color-hover;
+				}
 			}
+
+			.active {
+				color: $main-color;
+			}
+		}
+	}
+
+	.in-out {
+		justify-self: end;
+	}
+
+	button {
+		padding: 0 13px;
+		border: 1px solid $gray;
+		border-radius: 20px;
+		min-width: 100px;
+		height: 40px;
+		text-align: center;
+		font-size: 14px;
+		line-height: 14px;
+		background-color: transparent;
+		color: $black;
+		transition: all 0.2s linear;
+		outline: none;
+		cursor: pointer;
+
+		&:hover,
+		&:focus {
+			border: 1px solid $deep-gray;
 		}
 	}
 }

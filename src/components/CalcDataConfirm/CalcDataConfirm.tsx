@@ -23,9 +23,9 @@ export const CalcDataConfirm = (): JSX.Element => {
 			<h1>Подтвердите данные</h1>
 			<div className='calc-data-confirm-search'>
 				<input
-					type='number'
+					type='text'
 					placeholder='Поиск'
-					onChange={e => searchItems(e.target.value)}
+					onChange={e => searchItems(e.target.value.replace(/\D/, ''))}
 					value={searchString}
 				/>
 

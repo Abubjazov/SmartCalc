@@ -1,6 +1,7 @@
 @import '../../variables';
 
 .calc-widget {
+	margin-top: 70px;
 	padding-top: 20px;
 
 	h1 {
@@ -24,20 +25,22 @@
 		height: 25px;
 		width: 260px;
 		border: none;
-		border-bottom: 2px solid $main-color;
+		border-bottom: 1px solid $deep-gray;
+		outline: none;
+		background: none;
+		font-size: 20px;
+		font-weight: 300;
+
+		&:focus {
+			border-bottom: 2px solid $main-color;
+		}
 	}
 
 	p {
 		position: absolute;
-		top: 7vh;
+		top: 13vh;
 		right: 1vw;
-
-		@media (min-width: 790px) {
-			top: 5.5vh;
-		}
-
-		@media (min-width: 900px) {
-			top: 8vh;
-		}
+		font-size: 14px;
+		font-weight: 900;
 	}
 }
