@@ -68,11 +68,11 @@
 	.header-menu {
 		justify-self: start;
 		grid-area: menu;
-		height: 4vh;
+		height: 52px;
 		transition: all 0.3s;
 
 		&_active {
-			height: 17vh;
+			height: 120px;
 		}
 
 		ul {
