@@ -33,6 +33,7 @@
 				margin-left: 10px;
 				color: $black;
 				text-decoration: none;
+				outline: none;
 				transition: all 0.1s linear;
 
 				&:hover {
@@ -50,24 +51,6 @@
 		justify-self: end;
 	}
 
-	.in-out a {
-		border-radius: 20px;
-		border: 1px solid $gray;
-		padding: 11px 13px;
-		text-align: center;
-		font-size: 14px;
-		line-height: 14px;
-		background-color: transparent;
-		color: $black;
-		text-decoration: none;
-		transition: all 0.2s linear;
-
-		&:hover,
-		&:focus {
-			border: 1px solid $deep-gray;
-		}
-	}
-
 	button {
 		padding: 0 13px;
 		border: 1px solid $gray;
@@ -80,9 +63,11 @@
 		background-color: transparent;
 		color: $black;
 		transition: all 0.2s linear;
+		outline: none;
 		cursor: pointer;
 
-		&:hover {
+		&:hover,
+		&:focus {
 			border: 1px solid $deep-gray;
 		}
 	}

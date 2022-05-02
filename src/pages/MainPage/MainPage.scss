@@ -10,7 +10,7 @@
 	animation-duration: 700ms;
 
 	.container {
-		padding: 13vh 0 5vh 0;
+		padding: 13vh 0 9vh 0;
 		min-height: 100vh;
 		max-width: calc(100vw - 5vw);
 		display: grid;
@@ -31,6 +31,7 @@
 			background-color: $main-color;
 			color: $white;
 			text-decoration: none;
+			outline: none;
 			transition: all 0.1s linear;
 
 			&:hover,

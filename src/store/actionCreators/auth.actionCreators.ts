@@ -46,3 +46,9 @@ export const deleteToken = () => {
 		}
 	}
 }
+
+export const clearError = () => {
+	return async (dispatch: Dispatch<AuthAction>) => {
+		dispatch({ type: AuthActionTypes.CLEAR_ERROR })
+	}
+}

@@ -3,29 +3,34 @@
 .login-widget {
 	display: grid;
 	grid-template-columns: auto;
-	grid-auto-rows: 25px;
 	row-gap: 15px;
 	justify-items: center;
 
 	button {
 		margin-top: 30px;
+		padding: 0 13px;
 		border: none;
 		border-radius: 20px;
-		width: 100px;
+		min-width: 100px;
 		height: 40px;
 		text-align: center;
 		font-size: 14px;
 		line-height: 14px;
-		background-color: $main-color;
+		background-color: $green;
 		color: $white;
-		transition: all 0.1s linear;
+		transition: all 0.37s linear;
 		outline: none;
 		cursor: pointer;
 
-		&:hover,
-		&:focus {
-			background-color: $main-color-hover;
+		&:disabled {
+			background-color: $gray;
 		}
+	}
+
+	p {
+		color: $red;
+		font-size: 13px;
+		line-height: 0px;
 	}
 
 	input {

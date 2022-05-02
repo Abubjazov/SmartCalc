@@ -6,6 +6,8 @@ export enum AuthActionTypes {
 	DELETE_TOKEN = 'DELETE_TOKEN',
 	DELETE_TOKEN_SUCCESS = 'DELETE_TOKEN_SUCCESS',
 	DELETE_TOKEN_ERROR = 'DELETE_TOKEN_ERROR',
+
+	CLEAR_ERROR = 'CLEAR_ERROR',
 }
 
 export interface AuthData {
@@ -55,6 +57,10 @@ interface DeleteTokenErrorAction {
 	payload: string
 }
 
+interface ClearErrorAction {
+	type: AuthActionTypes.CLEAR_ERROR
+}
+
 export type AuthAction =
 	| FetchTokenAction
 	| FetchTokenSuccessAction
@@ -62,3 +68,4 @@ export type AuthAction =
 	| DeleteTokenAction
 	| DeleteTokenSuccessAction
 	| DeleteTokenErrorAction
+	| ClearErrorAction

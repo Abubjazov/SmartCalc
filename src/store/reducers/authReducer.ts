@@ -62,6 +62,13 @@ export const authReducer = (
 				error: action.payload,
 			}
 
+		case AuthActionTypes.CLEAR_ERROR:
+			return {
+				...state,
+				status: 'waiting',
+				error: null,
+			}
+
 		default:
 			return state
 	}
