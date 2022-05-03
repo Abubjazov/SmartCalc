@@ -13,20 +13,20 @@ https://abubjazov.github.io/SmartCalc/
 
 **[Главная страница]** - первое что видит пользователь.
 
-![LANDING](docs/mainPage.jpg)
+![LANDING](docs/main.jpg)
 
 **[Страница ввода логина и пароля]** - где пользователь уже зарегистрированный в системе может ввести свой логин и пароль и попасть на страницу "Калькулятор".
 
-![LANDING](docs/loginPage.jpg)
+![LANDING](docs/login.jpg)
 
 **[Страница калькулятора]** - где пользователь может ввести данные и получить результат расчёта.
 
-![LANDING](docs/calcPage.jpg)
+![LANDING](docs/calc.jpg)
 
 ## Отчеты Lighthouse
 
 **Страница калькулятора Desktop**
-![LIGHTHOUSE_REPORT](docs/lighthouse.jpg)
+![LIGHTHOUSE_REPORT](docs/lighthouse_desctop.jpg)
 
 ## Стек технологий
 
