@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet'
 import { useTypedSelector } from '../../hooks/useTypedSelector'
 
 import './CalcDataConfirm.scss'
+import { KeyboardEvent } from 'react'
 
 export const CalcDataConfirm = (): JSX.Element => {
 	const { sortedItems, sortDirection, searchString } = useTypedSelector(
@@ -14,6 +15,12 @@ export const CalcDataConfirm = (): JSX.Element => {
 
 	const { sortItems, searchItems, switchToDataInput, switchToResult } =
 		useActions()
+
+	const sortHandler = (key: KeyboardEvent) => {
+		if (key.code === 'Space' || key.code === 'Enter') {
+			sortItems()
+		}
+	}
 
 	return (
 		<div className='calc-data-confirm'>
@@ -30,8 +37,10 @@ export const CalcDataConfirm = (): JSX.Element => {
 				/>
 
 				<div
+					tabIndex={0}
 					className={`sort ${sortDirection ? null : 'rotated'}`}
 					onClick={sortItems}
+					onKeyDown={(key: KeyboardEvent) => sortHandler(key)}
 				>
 					^
 				</div>
