@@ -28,6 +28,10 @@ https://abubjazov.github.io/SmartCalc/
 **Страница калькулятора Desktop**
 ![LIGHTHOUSE_REPORT](docs/lighthouse_desctop.jpg)
 
+## Структура компонентов
+
+![COMPONENTS_TREE](docs/components_tree.svg)
+
 ## Стек технологий
 
 ```
