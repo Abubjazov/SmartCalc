@@ -18,11 +18,6 @@ export const initialState: CalcState = {
 	error: null,
 }
 
-const zeroInputItems = [
-	{ key: 'a13key1', value: '' },
-	{ key: 'a13key2', value: '' },
-]
-
 export const calcReducer = (
 	state: CalcState = initialState,
 	action: CalcAction
@@ -41,7 +36,10 @@ export const calcReducer = (
 				inputItems:
 					action.payload.items === []
 						? action.payload.items.map(item => createInputItem(item))
-						: zeroInputItems,
+						: [
+								{ key: 'a13key1', value: '' },
+								{ key: 'a13key2', value: '' },
+						  ],
 
 				summary:
 					action.payload.items === []
@@ -132,7 +130,10 @@ export const calcReducer = (
 				searchString: '',
 				sortedItems: action.payload.items,
 				step: action.payload.step,
-				inputItems: zeroInputItems,
+				inputItems: [
+					{ key: 'a13key1', value: '' },
+					{ key: 'a13key2', value: '' },
+				],
 			}
 
 		case CalcActionTypes.SWITCH_TO_DATAINPUT_ERROR:
@@ -193,7 +194,10 @@ export const calcReducer = (
 				items: action.payload.items,
 				sortedItems: action.payload.items,
 				step: action.payload.step,
-				inputItems: zeroInputItems,
+				inputItems: [
+					{ key: 'a13key1', value: '' },
+					{ key: 'a13key2', value: '' },
+				],
 				summary: 0,
 			}
 
