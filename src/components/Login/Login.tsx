@@ -59,6 +59,9 @@ export const Login = (): JSX.Element => {
 	return (
 		<div className='login-widget'>
 			<input
+				className={
+					email.isValid !== null ? (email.isValid ? 'null' : 'warning') : 'null'
+				}
 				type='email'
 				placeholder='your@email.com'
 				onChange={e => setInputState(e.target.value, 'email')}
@@ -70,6 +73,13 @@ export const Login = (): JSX.Element => {
 				)
 			) : null}
 			<input
+				className={
+					password.isValid !== null
+						? email.isValid
+							? 'null'
+							: 'warning'
+						: 'null'
+				}
 				type='password'
 				placeholder='password'
 				onChange={e => setInputState(e.target.value, 'password')}
