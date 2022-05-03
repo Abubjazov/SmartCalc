@@ -34,12 +34,12 @@ export const calcReducer = (
 				sortedItems: action.payload.items,
 				step: action.payload.step,
 				inputItems:
-					action.payload.items === []
-						? action.payload.items.map(item => createInputItem(item))
-						: [
+					action.payload.items.length === 0
+						? [
 								{ key: 'a13key1', value: '' },
 								{ key: 'a13key2', value: '' },
-						  ],
+						  ]
+						: action.payload.items.map(item => createInputItem(item)),
 
 				summary:
 					action.payload.items === []
