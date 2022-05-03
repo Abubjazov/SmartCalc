@@ -17,9 +17,13 @@ export const MainPage = (): JSX.Element => {
 			<div className='container'>
 				<Info />
 				{token ? (
-					<NavLink to='/smartcalc/calc'>Калькулятор</NavLink>
+					<NavLink className='main-page-a' to='/smartcalc/calc'>
+						Калькулятор
+					</NavLink>
 				) : (
-					<NavLink to='/smartcalc/login'>Войти</NavLink>
+					<NavLink className='main-page-a' to='/smartcalc/login'>
+						Войти
+					</NavLink>
 				)}
 			</div>
 		</main>
