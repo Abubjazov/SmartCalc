@@ -1,21 +1,20 @@
 import { nanoid } from 'nanoid'
-import { KeyboardEvent } from 'react'
+import { KeyboardEvent, useState } from 'react'
 import { Helmet } from 'react-helmet'
 
 import { useActions } from '../../hooks/useActions'
 import { useTypedSelector } from '../../hooks/useTypedSelector'
-import { InputItem } from '../../interfaces'
+import { checkInputItems, convertArray } from '../../utils/utils'
+import { CalcInput } from '../CalcInput/CalcInput'
 
 import './CalcDataInput.scss'
 
 export const CalcDataInput = (): JSX.Element => {
 	const { inputItems } = useTypedSelector(state => state.calc)
 	const { token } = useTypedSelector(state => state.auth)
-	const { addInputItem, changeInputItem, removeInputItem, switchToConfirm } =
-		useActions()
+	const { addInputItem, removeInputItem, switchToConfirm } = useActions()
 
-	const convertArray = (arr: InputItem[]): number[] =>
-		arr.map(item => +item.value)
+	const [submitStatus, setSubmitStatus] = useState<boolean | null>(null)
 
 	const removeItem = (key: KeyboardEvent, itemKey: string) => {
 		if (key.code === 'Space' || key.code === 'Enter') {
@@ -29,6 +28,15 @@ export const CalcDataInput = (): JSX.Element => {
 		}
 	}
 
+	const submitHandler = () => {
+		if (checkInputItems(inputItems)) {
+			setSubmitStatus(false)
+			return
+		}
+
+		switchToConfirm(convertArray(inputItems), token)
+	}
+
 	return (
 		<div className='calc-data-input'>
 			<Helmet>
@@ -37,24 +45,17 @@ export const CalcDataInput = (): JSX.Element => {
 			<h1>Введите данные</h1>
 			{inputItems.map((item, index) =>
 				index < 2 ? (
-					<input
-						key={item.key}
-						type='text'
-						placeholder='Введите число'
-						onChange={e =>
-							changeInputItem(item.key, e.target.value.replace(/\D/, ''))
-						}
-						value={item.value}
+					<CalcInput
+						itemKey={item.key}
+						itemValue={item.value}
+						submitStatus={submitStatus}
 					/>
 				) : (
 					<div className='added-item' key={item.key}>
-						<input
-							type='text'
-							placeholder='Введите число'
-							onChange={e =>
-								changeInputItem(item.key, e.target.value.replace(/\D/, ''))
-							}
-							value={item.value}
+						<CalcInput
+							itemKey={item.key}
+							itemValue={item.value}
+							submitStatus={submitStatus}
 						/>
 						<div
 							tabIndex={0}
@@ -72,16 +73,17 @@ export const CalcDataInput = (): JSX.Element => {
 				<div
 					tabIndex={0}
 					className='add-item'
-					onClick={() => addInputItem({ key: nanoid(), value: '' })}
+					onClick={() => {
+						addInputItem({ key: nanoid(), value: '' })
+						setSubmitStatus(null)
+					}}
 					onKeyDown={(key: KeyboardEvent) => addItem(key)}
 				>
 					+
 				</div>
 			) : null}
 
-			<button onClick={() => switchToConfirm(convertArray(inputItems), token)}>
-				Далее
-			</button>
+			<button onClick={submitHandler}>Далее</button>
 		</div>
 	)
 }

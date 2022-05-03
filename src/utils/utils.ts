@@ -35,3 +35,17 @@ export const maskEmail = (email: string): string => {
 
 	return capitalizeFirstLetter(emailArr[0]) + '@' + maskString(emailArr[1])
 }
+
+export const convertArray = (arr: InputItem[]): number[] =>
+	arr.map(item => +item.value)
+
+export const checkInputItems = (
+	inputItems: { key: string; value: string }[]
+): boolean => {
+	for (let i = 0; i < inputItems.length; i++) {
+		if (inputItems[i].value === '') {
+			return true
+		}
+	}
+	return false
+}

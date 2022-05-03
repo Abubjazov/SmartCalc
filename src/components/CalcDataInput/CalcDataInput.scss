@@ -4,7 +4,7 @@
 	display: grid;
 	grid-template-columns: 300px;
 	grid-template-rows: 50px 38px 38px;
-	grid-row: auto;
+	grid-auto-rows: 38px;
 	row-gap: 10px;
 	justify-items: left;
 	animation-name: opacity;
@@ -32,7 +32,6 @@
 	}
 
 	.added-item {
-		margin-bottom: 13px;
 		display: flex;
 		animation-name: opacity;
 		animation-duration: 700ms;

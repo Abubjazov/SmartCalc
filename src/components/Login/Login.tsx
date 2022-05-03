@@ -9,41 +9,44 @@ import './Login.scss'
 export const Login = (): JSX.Element => {
 	const [submitStatus, setSubmitStatus] = useState<boolean>(true)
 
-	const [email, setEmail] = useState<{ value: string; valid: boolean | null }>({
+	const [email, setEmail] = useState<{
+		value: string
+		isValid: boolean | null
+	}>({
 		value: '',
-		valid: null,
+		isValid: null,
 	})
 	const [password, setPassword] = useState<{
 		value: string
-		valid: boolean | null
+		isValid: boolean | null
 	}>({
 		value: '',
-		valid: null,
+		isValid: null,
 	})
 
 	const { status, error } = useTypedSelector(state => state.auth)
 	const { fetchToken, clearError } = useActions()
 
 	const setInputState = (value: string, field: string) => {
-		let valid = false
+		let isValid = false
 
 		if (field === 'email') {
-			valid =
+			isValid =
 				value.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i) !== null
 					? true
 					: false
-			setEmail({ value, valid })
+			setEmail({ value, isValid })
 		}
 
 		if (field === 'password') {
-			valid = value.length > 7 ? true : false
-			setPassword({ value, valid })
+			isValid = value.length > 7
+			setPassword({ value, isValid })
 		}
 	}
 
 	useEffect(() => {
-		setSubmitStatus(!(email.valid === true && password.valid === true))
-	}, [email.valid, password.valid])
+		setSubmitStatus(!(email.isValid === true && password.isValid === true))
+	}, [email.isValid, password.isValid])
 
 	useEffect(() => {
 		let resetError = setTimeout(clearError, 3000)
@@ -56,24 +59,34 @@ export const Login = (): JSX.Element => {
 	return (
 		<div className='login-widget'>
 			<input
+				className={
+					email.isValid !== null ? (email.isValid ? 'null' : 'warning') : 'null'
+				}
 				type='email'
 				placeholder='your@email.com'
 				onChange={e => setInputState(e.target.value, 'email')}
 				value={email.value}
 			/>
-			{email.valid !== null ? (
-				email.valid === true ? null : (
+			{email.isValid !== null ? (
+				email.isValid ? null : (
 					<p>Неверный формат email</p>
 				)
 			) : null}
 			<input
+				className={
+					password.isValid !== null
+						? email.isValid
+							? 'null'
+							: 'warning'
+						: 'null'
+				}
 				type='password'
 				placeholder='password'
 				onChange={e => setInputState(e.target.value, 'password')}
 				value={password.value}
 			/>
-			{password.valid !== null ? (
-				password.valid === true ? null : (
+			{password.isValid !== null ? (
+				password.isValid ? null : (
 					<p>Минимум 8 символов</p>
 				)
 			) : null}

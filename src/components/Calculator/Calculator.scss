@@ -21,21 +21,6 @@
 		transition: all 0.1s linear;
 	}
 
-	input {
-		height: 25px;
-		width: 260px;
-		border: none;
-		border-bottom: 1px solid $deep-gray;
-		outline: none;
-		background: none;
-		font-size: 20px;
-		font-weight: 300;
-
-		&:focus {
-			border-bottom: 2px solid $main-color;
-		}
-	}
-
 	p {
 		position: absolute;
 		top: 11vh;

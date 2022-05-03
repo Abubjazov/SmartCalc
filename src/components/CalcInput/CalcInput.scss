@@ -1,0 +1,29 @@
+@import '../../variables';
+
+.calc-input {
+	.calc-input-warning {
+		position: static;
+		color: $red;
+		font-size: 13px;
+		line-height: 17px;
+	}
+
+	input {
+		height: 25px;
+		width: 260px;
+		border: none;
+		border-bottom: 1px solid $deep-gray;
+		outline: none;
+		background: none;
+		font-size: 20px;
+		font-weight: 300;
+
+		&:focus {
+			border-bottom: 2px solid $main-color;
+		}
+	}
+
+	.warning {
+		border-bottom: 1px solid $deep-red;
+	}
+}
