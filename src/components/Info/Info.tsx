@@ -34,7 +34,6 @@ export const Info = (): JSX.Element => (
 			Typescript, React, ReactRouter, ReactHelmet, Redux, ReduxThunk, Axios,
 			Nanoid, Bcryptjs, SASS
 		</h3>
-
 		<p className='calc-info-clarification'>
 			Все права защищены! &copy; Abubjazov 2022 (
 			<a
