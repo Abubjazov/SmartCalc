@@ -6,15 +6,29 @@ export const Info = (): JSX.Element => (
 		<h3>Онлайн калькулятор</h3>
 		<p>SPA на основе React, Redux и Typescript</p>
 		<p>Репозиторий проекта:</p>
-		<a href='https://github.com/Abubjazov/SmartCalc'>
+		<a
+			target='_blank'
+			rel='noopener noreferrer'
+			href='https://github.com/Abubjazov/SmartCalc'
+		>
 			github.com/Abubjazov/SmartCalc
 		</a>
 		<p>Документация:</p>
-		<a href='https://github.com/Abubjazov/SmartCalc/blob/main/README.md'>
+		<a
+			target='_blank'
+			rel='noopener noreferrer'
+			href='https://github.com/Abubjazov/SmartCalc/blob/main/README.md'
+		>
 			README.md
 		</a>
 		<p>Demo сервер:</p>
-		<a href='https://abubjazov.github.io/SmartCalc/'>github.io/SmartCalc/</a>
+		<a
+			target='_blank'
+			rel='noopener noreferrer'
+			href='https://abubjazov.github.io/SmartCalc/'
+		>
+			github.io/SmartCalc/
+		</a>
 		<p>Стэк технологий:</p>
 		<h3>
 			Typescript, React, ReactRouter, ReactHelmet, Redux, ReduxThunk, Axios,
@@ -23,7 +37,14 @@ export const Info = (): JSX.Element => (
 
 		<p className='calc-info-clarification'>
 			Все права защищены! &copy; Abubjazov 2022 (
-			<a href='https://github.com/Abubjazov'>https://github.com/Abubjazov</a>)
+			<a
+				target='_blank'
+				rel='noopener noreferrer'
+				href='https://github.com/Abubjazov'
+			>
+				https://github.com/Abubjazov
+			</a>
+			)
 		</p>
 	</div>
 )
