@@ -2,21 +2,28 @@ import './Info.scss'
 
 export const Info = (): JSX.Element => (
 	<div className='calc-info'>
-		<h2>У QIWI всё под контролем</h2>
-		<h3>Нас не коснулись никакие санкции ; )</h3>
-		<p>Мы продолжаем проводить операции наших пользователей.</p>
-
+		<h2>SMART CALC V.2</h2>
+		<h3>Онлайн калькулятор</h3>
+		<p>SPA на основе React, Redux и Typescript</p>
+		<p>Репозиторий проекта:</p>
+		<a href='https://github.com/Abubjazov/SmartCalc'>
+			github.com/Abubjazov/SmartCalc
+		</a>
+		<p>Документация:</p>
+		<a href='https://github.com/Abubjazov/SmartCalc/blob/main/README.md'>
+			README.md
+		</a>
+		<p>Demo сервер:</p>
+		<a href='https://abubjazov.github.io/SmartCalc/'>github.io/SmartCalc/</a>
+		<p>Стэк технологий:</p>
 		<h3>
-			Когда срочно нужны деньги, пополните кошелек быстрым займом через наших
-			партнеров.
+			Typescript, React, ReactRouter, ReactHelmet, Redux, ReduxThunk, Axios,
+			Nanoid, Bcryptjs, SASS
 		</h3>
-		<p>
-			Также деньги можно получить на банковскую карту или наличными в офисах
-			CONTACT.
-		</p>
+
 		<p className='calc-info-clarification'>
-			Услуга для лиц старше 18 лет. Понадобится паспорт РФ и почта. Иногда —
-			телефон работодателя и авторизация в соцсети.
+			Все права защищены! &copy; Abubjazov 2022 (
+			<a href='https://github.com/Abubjazov'>https://github.com/Abubjazov</a>)
 		</p>
 	</div>
 )
