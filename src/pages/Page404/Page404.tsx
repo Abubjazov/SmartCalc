@@ -1,6 +1,9 @@
 import { Helmet } from 'react-helmet'
+import { NavLink } from 'react-router-dom'
 
 import { ErrorGif } from '../../components'
+
+import './Page404.scss'
 
 export const Page404 = (): JSX.Element => (
 	<main className='page-404'>
@@ -11,8 +14,8 @@ export const Page404 = (): JSX.Element => (
 		<p tabIndex={0} role='alert'>
 			Страница не найдена
 		</p>
-		<a href='/smartcalc/' role='alert'>
+		<NavLink to='/smartcalc/' role='alert'>
 			Вернуться на главную
-		</a>
+		</NavLink>
 	</main>
 )

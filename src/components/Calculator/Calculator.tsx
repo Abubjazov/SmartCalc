@@ -6,12 +6,13 @@ import { maskEmail } from '../../utils/utils'
 import { CalcDataConfirm } from '../CalcDataConfirm/CalcDataConfirm'
 import { CalcDataInput } from '../CalcDataInput/CalcDataInput'
 import { CalcDataResult } from '../CalcDataResult/CalcDataResult'
+import { ErrorMessage } from '../ErrorMessage/ErrorMessage'
 import { Spinner } from '../Spinner/Spinner'
 
 import './Calculator.scss'
 
 export const Calculator = (): JSX.Element => {
-	const { step, status } = useTypedSelector(state => state.calc)
+	const { step, status, error } = useTypedSelector(state => state.calc)
 	const { token, email } = useTypedSelector(state => state.auth)
 
 	const { fetchCurrentState } = useActions()
@@ -28,10 +29,11 @@ export const Calculator = (): JSX.Element => {
 					{status === 'loading' ? <Spinner /> : null}
 					{status === 'waiting' ? (
 						<>
-							<p>Привет, {maskEmail(email)}</p>
+							<p className='calc-widget-p'>Привет, {maskEmail(email)}</p>
 							<CalcDataInput />
 						</>
 					) : null}
+					{status === 'error' ? <ErrorMessage errorMessage={error} /> : null}
 				</div>
 			)
 		case 2:
@@ -40,10 +42,11 @@ export const Calculator = (): JSX.Element => {
 					{status === 'loading' ? <Spinner /> : null}
 					{status === 'waiting' ? (
 						<>
-							<p>Привет, {maskEmail(email)}</p>
+							<p className='calc-widget-p'>Привет, {maskEmail(email)}</p>
 							<CalcDataConfirm />
 						</>
 					) : null}
+					{status === 'error' ? <ErrorMessage errorMessage={error} /> : null}
 				</div>
 			)
 
@@ -53,10 +56,11 @@ export const Calculator = (): JSX.Element => {
 					{status === 'loading' ? <Spinner /> : null}
 					{status === 'waiting' ? (
 						<>
-							<p>Привет, {maskEmail(email)}</p>
+							<p className='calc-widget-p'>Привет, {maskEmail(email)}</p>
 							<CalcDataResult />
 						</>
 					) : null}
+					{status === 'error' ? <ErrorMessage errorMessage={error} /> : null}
 				</div>
 			)
 		default:

@@ -90,7 +90,7 @@ export const Login = (): JSX.Element => {
 					<p>Минимум 8 символов</p>
 				)
 			) : null}
-			{status === 'error' && error?.includes('Authentication error!') ? (
+			{status === 'error' && error?.includes('Пользователь не найден') ? (
 				<p>Неверный логин или пароль</p>
 			) : null}
 			<button
