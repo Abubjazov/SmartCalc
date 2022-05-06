@@ -21,10 +21,12 @@ export const fetchCurrentState = (token: string) => {
 				type: CalcActionTypes.FETCH_CURRENT_STATE_SUCCESS,
 				payload: response.data,
 			})
-		} catch (error) {
+		} catch (error: any) {
 			dispatch({
 				type: CalcActionTypes.FETCH_CURRENT_STATE_ERROR,
-				payload: `An error occurred while loading the user data!*${error}`,
+				payload: `Извините, произошла ошибка при попытке загрузки данных пользователя! Попробуйте повторить попытку позже.*Описание ошибки: ${
+					error?.message + '>>' + error?.response?.data?.error
+				}`,
 			})
 		}
 	}
@@ -52,10 +54,12 @@ export const switchToConfirm = (items: number[], token: string | null) => {
 				type: CalcActionTypes.SWITCH_TO_CONFIRM_SUCCESS,
 				payload: response.data,
 			})
-		} catch (error) {
+		} catch (error: any) {
 			dispatch({
 				type: CalcActionTypes.SWITCH_TO_CONFIRM_ERROR,
-				payload: `An error occurred while loading confirm data!*${error}`,
+				payload: `Извините, произошла ошибка при попытке подтверждения данных! Попробуйте повторить попытку позже.*Описание ошибки: ${
+					error?.message + '>>' + error?.response?.data?.error
+				}`,
 			})
 		}
 	}
@@ -127,10 +131,12 @@ export const switchToDataInput = (token: string | null) => {
 				type: CalcActionTypes.SWITCH_TO_DATAINPUT_SUCCESS,
 				payload: response.data,
 			})
-		} catch (error) {
+		} catch (error: any) {
 			dispatch({
 				type: CalcActionTypes.SWITCH_TO_DATAINPUT_ERROR,
-				payload: `An error occurred while loading input data!*${error}`,
+				payload: `Извините, произошла ошибка при попытке загрузки введённых значений! Попробуйте повторить попытку позже.*Описание ошибки: ${
+					error?.message + '>>' + error?.response?.data?.error
+				}`,
 			})
 		}
 	}
@@ -158,10 +164,12 @@ export const switchToResult = (token: string | null) => {
 				type: CalcActionTypes.SWITCH_TO_RESULT_SUCCESS,
 				payload: response.data,
 			})
-		} catch (error) {
+		} catch (error: any) {
 			dispatch({
 				type: CalcActionTypes.SWITCH_TO_RESULT_ERROR,
-				payload: `An error occurred while loading result data!*${error}`,
+				payload: `Извините, произошла ошибка при попытке загрузки результатов расчёта! Попробуйте повторить попытку позже.*Описание ошибки: ${
+					error?.message + '>>' + error?.response?.data?.error
+				}`,
 			})
 		}
 	}
@@ -189,10 +197,12 @@ export const resetToDataInput = (token: string | null) => {
 				type: CalcActionTypes.RESET_TO_DATA_INPUT_SUCCESS,
 				payload: response.data,
 			})
-		} catch (error) {
+		} catch (error: any) {
 			dispatch({
 				type: CalcActionTypes.RESET_TO_DATA_INPUT_ERROR,
-				payload: `An error occurred while loading input data!*${error}`,
+				payload: `Извините, произошла ошибка при попытке загрузки введённых значений! Попробуйте повторить попытку позже.*Описание ошибки: ${
+					error?.message + '>>' + error?.response?.data?.error
+				}`,
 			})
 		}
 	}
@@ -220,10 +230,12 @@ export const resetToNewCalculation = (token: string | null) => {
 				type: CalcActionTypes.RESET_TO_NEW_CALCULATION_SUCCESS,
 				payload: response.data,
 			})
-		} catch (error) {
+		} catch (error: any) {
 			dispatch({
 				type: CalcActionTypes.RESET_TO_NEW_CALCULATION_ERROR,
-				payload: `An error occurred while loading new calculation!*${error}`,
+				payload: `Извините, произошла ошибка при попытке удаления данных предыдущего расчёта! Попробуйте повторить попытку позже.*Описание ошибки: ${
+					error?.message + '>>' + error?.response?.data?.error
+				}`,
 			})
 		}
 	}

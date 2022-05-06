@@ -19,10 +19,12 @@ export const fetchToken = (authData: AuthData) => {
 			})
 
 			localStorage.setItem('smartcalc_token', JSON.stringify(response.data))
-		} catch (error) {
+		} catch (error: any) {
 			dispatch({
 				type: AuthActionTypes.FETCH_TOKEN_ERROR,
-				payload: `Authentication error!*${error}`,
+				payload: `Извините, произошла ошибка при попытке аутентификации пользователя! Попробуйте повторить попытку позже.*Описание ошибки: ${
+					error?.message + '>>' + error?.response?.data?.error
+				}`,
 			})
 		}
 	}
@@ -38,10 +40,12 @@ export const deleteToken = () => {
 			dispatch({
 				type: AuthActionTypes.DELETE_TOKEN_SUCCESS,
 			})
-		} catch (error) {
+		} catch (error: any) {
 			dispatch({
 				type: AuthActionTypes.FETCH_TOKEN_ERROR,
-				payload: `Delete token error!*${error}`,
+				payload: `Извините, произошла ошибка при попытке удаления токена! Попробуйте повторить попытку.*Описание ошибки: ${
+					error?.message + '>>' + error?.response?.data?.error
+				}`,
 			})
 		}
 	}

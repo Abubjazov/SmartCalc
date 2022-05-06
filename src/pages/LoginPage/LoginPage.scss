@@ -22,19 +22,5 @@
 		svg {
 			justify-self: center;
 		}
-
-		a {
-			border-radius: 20px;
-			padding-top: 11px;
-			width: 100px;
-			height: 40px;
-			text-align: center;
-			font-size: 18px;
-			line-height: 18px;
-			background-color: $main-color;
-			color: $white;
-			text-decoration: none;
-			transition: all 0.1s linear;
-		}
 	}
 }
