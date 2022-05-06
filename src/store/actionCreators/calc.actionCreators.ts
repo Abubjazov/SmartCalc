@@ -57,7 +57,7 @@ export const switchToConfirm = (items: number[], token: string | null) => {
 		} catch (error: any) {
 			dispatch({
 				type: CalcActionTypes.SWITCH_TO_CONFIRM_ERROR,
-				payload: `Извините, произошла ошибка при попытке подтверждения данных! Попробуйте повторить попытку позже.*Описание ошибки: ${
+				payload: `Извините, произошла ошибка при переходе к подтверждению данных! Попробуйте повторить попытку позже.*Описание ошибки: ${
 					error?.message + '>>' + error?.response?.data?.error
 				}`,
 			})
@@ -134,7 +134,7 @@ export const switchToDataInput = (token: string | null) => {
 		} catch (error: any) {
 			dispatch({
 				type: CalcActionTypes.SWITCH_TO_DATAINPUT_ERROR,
-				payload: `Извините, произошла ошибка при попытке загрузки введённых значений! Попробуйте повторить попытку позже.*Описание ошибки: ${
+				payload: `Извините, произошла ошибка при попытке сброса введённых значений! Попробуйте повторить попытку позже.*Описание ошибки: ${
 					error?.message + '>>' + error?.response?.data?.error
 				}`,
 			})
