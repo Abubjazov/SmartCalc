@@ -1,5 +1,5 @@
 import { nanoid } from 'nanoid'
-import { InputItem } from '../interfaces'
+import { InputItem, UserData } from '../interfaces'
 
 export const splitString = (item: string, step: number): string[] => {
 	const result: string[] = []
@@ -51,3 +51,7 @@ export const checkInputItems = (
 	}
 	return false
 }
+
+export const convertAuthData = (
+	authDataString: null | string
+): null | UserData => (authDataString ? JSON.parse(authDataString) : null)

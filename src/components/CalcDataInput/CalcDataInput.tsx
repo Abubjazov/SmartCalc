@@ -46,6 +46,7 @@ export const CalcDataInput = (): JSX.Element => {
 			{inputItems.map((item, index) =>
 				index < 2 ? (
 					<CalcInput
+						key={item.key}
 						itemKey={item.key}
 						itemValue={item.value}
 						submitStatus={submitStatus}

@@ -2,6 +2,7 @@ import {
 	capitalizeFirstLetter,
 	checkInputItems,
 	convertArray,
+	convertAuthData,
 	createInputItem,
 	maskEmail,
 	maskString,
@@ -104,5 +105,18 @@ describe('Function: utils/checkInputItems()', () => {
 				{ key: 'a13key3', value: '3' },
 			])
 		).toBeFalsy()
+	})
+})
+
+const userData =
+	'{"token":"123432sdfsdfsdf234GHS","email":"test@test.com","name":"Victor"}'
+
+describe('Function: utils/convertAuthData()', () => {
+	test('convertAuthData() / convert AuthData', () => {
+		expect(convertAuthData(userData)).toEqual({
+			token: '123432sdfsdfsdf234GHS',
+			email: 'test@test.com',
+			name: 'Victor',
+		})
 	})
 })
