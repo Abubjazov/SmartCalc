@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: ErrorMessage should render ErrorMessage 1`] = `
+<DocumentFragment>
+  <div
+    class="error-message"
+    role="alert"
+  >
+    <p
+      class="error-message-p"
+      tabindex="0"
+    >
+      Test Error String
+    </p>
+    <p
+      class="error-message-p"
+      tabindex="0"
+    >
+      Test Error String 2
+    </p>
+    <a
+      class="error-message-a"
+      href="/smartcalc/"
+    >
+      Вернуться на главную
+    </a>
+  </div>
+</DocumentFragment>
+`;
