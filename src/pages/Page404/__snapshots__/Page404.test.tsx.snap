@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Page404 should render Page404 1`] = `
+<DocumentFragment>
+  <main
+    class="page-404"
+  >
+    <img
+      alt="An error has occurred"
+      src="Error.gif"
+      style="display: block; width: 128px; height: 102px; object-fit: contain; margin: 0px auto;"
+    />
+    <p
+      role="alert"
+      tabindex="0"
+    >
+      Страница не найдена
+    </p>
+    <a
+      class=""
+      href="/smartcalc/"
+      role="alert"
+    >
+      Вернуться на главную
+    </a>
+  </main>
+</DocumentFragment>
+`;

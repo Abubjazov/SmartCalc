@@ -1,8 +1,10 @@
 import { nanoid } from 'nanoid'
 import { InputItem } from '../interfaces'
 
-const splitString = (item: string, step: number): string[] => {
+export const splitString = (item: string, step: number): string[] => {
 	const result: string[] = []
+
+	if (step < 1) return result
 
 	for (let i = 0; i < item.length - step + 1; i++) {
 		result.push(item.substring(i, i + step))
@@ -11,13 +13,13 @@ const splitString = (item: string, step: number): string[] => {
 	return result
 }
 
-const maskString = (string: string): string => {
+export const maskString = (string: string): string => {
 	const stringArr = string.split('.')
 
 	return stringArr[0][0] + '***.' + stringArr[1]
 }
 
-const capitalizeFirstLetter = (string: string): string =>
+export const capitalizeFirstLetter = (string: string): string =>
 	string.charAt(0).toUpperCase() + string.slice(1)
 
 export const matchCheck = (item: number, value: string): boolean => {
