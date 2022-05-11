@@ -1,16 +1,19 @@
-import { render } from '@testing-library/react'
+import renderer from 'react-test-renderer'
 import { Provider } from 'react-redux'
+
 import { store } from '../../store'
 
 import { App } from './App'
 
 describe('Component: App', () => {
-	test('should render App', () => {
-		const { asFragment } = render(
-			<Provider store={store}>
-				<App />
-			</Provider>
-		)
-		expect(asFragment()).toMatchSnapshot()
+	test('renders correctly', () => {
+		const tree = renderer
+			.create(
+				<Provider store={store}>
+					<App />
+				</Provider>
+			)
+			.toJSON()
+		expect(tree).toMatchSnapshot()
 	})
 })
