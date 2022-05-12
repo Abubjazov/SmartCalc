@@ -1,7 +1,8 @@
 import { AuthAction, AuthActionTypes, AuthState } from '../../interfaces'
+import { convertAuthData } from '../../utils/utils'
 
 const authDataString = localStorage.getItem('smartcalc_token')
-const authData = authDataString ? JSON.parse(authDataString) : null
+const authData = convertAuthData(authDataString)
 
 export const initialState: AuthState = {
 	token: authData?.token || null,
