@@ -108,13 +108,12 @@ describe('Function: utils/checkInputItems()', () => {
 	})
 })
 
-const userData =
-	'{"token":"123432sdfsdfsdf234GHS","email":"test@test.com","name":"Victor"}'
+const userData = '{"token":"testtoken","email":"test@test.com","name":"Victor"}'
 
 describe('Function: utils/convertAuthData()', () => {
 	test('convertAuthData() / convert AuthData', () => {
 		expect(convertAuthData(userData)).toEqual({
-			token: '123432sdfsdfsdf234GHS',
+			token: 'testtoken',
 			email: 'test@test.com',
 			name: 'Victor',
 		})
