@@ -69,6 +69,10 @@ describe('Action creator: fetchToken', () => {
 
 describe('Action creator: deleteToken', () => {
 	test('Deleting: Success', async () => {
+		const errorMessage = 'Token delete Error'
+
+		Storage.prototype.removeItem = jest.fn(() => new Error(errorMessage))
+
 		const expectedActions = [
 			{
 				type: AuthActionTypes.DELETE_TOKEN,
@@ -86,9 +90,9 @@ describe('Action creator: deleteToken', () => {
 	})
 
 	// test('Deleting: Error', async () => {
-	// 	const errorMessage = 'Token delete Error'
+	// const errorMessage = 'Token delete Error'
 
-	// 	Storage.prototype.removeItem = jest.fn(() => new Error(errorMessage))
+	// Storage.prototype.removeItem = jest.fn(() => new Error(errorMessage))
 
 	// 	const expectedActions = [
 	// 		{
