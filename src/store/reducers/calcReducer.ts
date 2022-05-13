@@ -1,14 +1,19 @@
-import { nanoid } from 'nanoid'
-
-import { CalcAction, CalcActionTypes, CalcState } from '../../interfaces'
+import {
+	CalcAction,
+	CalcActionTypes,
+	CalcState,
+	InputItem,
+} from '../../interfaces'
 import { matchCheck, returnInputItems, returnSummary } from '../../utils/utils'
+
+export const inputItemsInitValue: InputItem[] = [
+	{ key: 'a13key1', value: '' },
+	{ key: 'a13key2', value: '' },
+]
 
 export const initialState: CalcState = {
 	items: [],
-	inputItems: [
-		{ key: nanoid(), value: '' },
-		{ key: nanoid(), value: '' },
-	],
+	inputItems: [...inputItemsInitValue],
 	sortedItems: [],
 	sortDirection: false,
 	searchString: '',
@@ -117,10 +122,7 @@ export const calcReducer = (
 				searchString: '',
 				sortedItems: action.payload.items,
 				step: action.payload.step,
-				inputItems: [
-					{ key: 'a13key1', value: '' },
-					{ key: 'a13key2', value: '' },
-				],
+				inputItems: [...inputItemsInitValue],
 			}
 
 		case CalcActionTypes.SWITCH_TO_DATAINPUT_ERROR:
@@ -181,10 +183,7 @@ export const calcReducer = (
 				items: action.payload.items,
 				sortedItems: action.payload.items,
 				step: action.payload.step,
-				inputItems: [
-					{ key: 'a13key1', value: '' },
-					{ key: 'a13key2', value: '' },
-				],
+				inputItems: [...inputItemsInitValue],
 				summary: 0,
 			}
 
