@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: MainPage should render MainPage with "Войти" 1`] = `
+<DocumentFragment>
+  <main
+    class="main-page"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="calc-info"
+      >
+        <h2>
+          SMART CALC V.2
+        </h2>
+        <h3>
+          Онлайн калькулятор
+        </h3>
+        <p>
+          SPA на основе React, Redux и Typescript
+        </p>
+        <p>
+          Репозиторий проекта:
+        </p>
+        <a
+          href="https://github.com/Abubjazov/SmartCalc"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          github.com/Abubjazov/SmartCalc
+        </a>
+        <p>
+          Документация:
+        </p>
+        <a
+          href="https://github.com/Abubjazov/SmartCalc/blob/main/README.md"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          README.md
+        </a>
+        <p>
+          Demo сервер:
+        </p>
+        <a
+          href="https://abubjazov.github.io/SmartCalc/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          github.io/SmartCalc/
+        </a>
+        <p>
+          Стэк технологий:
+        </p>
+        <h3>
+          Typescript, React, ReactRouter, ReactHelmet, Redux, ReduxThunk, Axios, Nanoid, Bcryptjs, SASS
+        </h3>
+        <p
+          class="calc-info-clarification"
+        >
+          Все права защищены! © Abubjazov 2022 (
+          <a
+            href="https://github.com/Abubjazov"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            https://github.com/Abubjazov
+          </a>
+          )
+        </p>
+      </div>
+      <a
+        class="main-page-a"
+        href="/smartcalc/login"
+      >
+        Войти
+      </a>
+    </div>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`Component: MainPage should render MainPage with "Калькулятор" 1`] = `
+<DocumentFragment>
+  <main
+    class="main-page"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="calc-info"
+      >
+        <h2>
+          SMART CALC V.2
+        </h2>
+        <h3>
+          Онлайн калькулятор
+        </h3>
+        <p>
+          SPA на основе React, Redux и Typescript
+        </p>
+        <p>
+          Репозиторий проекта:
+        </p>
+        <a
+          href="https://github.com/Abubjazov/SmartCalc"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          github.com/Abubjazov/SmartCalc
+        </a>
+        <p>
+          Документация:
+        </p>
+        <a
+          href="https://github.com/Abubjazov/SmartCalc/blob/main/README.md"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          README.md
+        </a>
+        <p>
+          Demo сервер:
+        </p>
+        <a
+          href="https://abubjazov.github.io/SmartCalc/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          github.io/SmartCalc/
+        </a>
+        <p>
+          Стэк технологий:
+        </p>
+        <h3>
+          Typescript, React, ReactRouter, ReactHelmet, Redux, ReduxThunk, Axios, Nanoid, Bcryptjs, SASS
+        </h3>
+        <p
+          class="calc-info-clarification"
+        >
+          Все права защищены! © Abubjazov 2022 (
+          <a
+            href="https://github.com/Abubjazov"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            https://github.com/Abubjazov
+          </a>
+          )
+        </p>
+      </div>
+      <a
+        class="main-page-a"
+        href="/smartcalc/calc"
+      >
+        Калькулятор
+      </a>
+    </div>
+  </main>
+</DocumentFragment>
+`;

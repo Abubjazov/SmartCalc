@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: CalcPage should render CalcPage default 1`] = `
+<DocumentFragment>
+  <main
+    class="calc-page"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="calc-info"
+      >
+        <h2>
+          SMART CALC V.2
+        </h2>
+        <h3>
+          Онлайн калькулятор
+        </h3>
+        <p>
+          SPA на основе React, Redux и Typescript
+        </p>
+        <p>
+          Репозиторий проекта:
+        </p>
+        <a
+          href="https://github.com/Abubjazov/SmartCalc"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          github.com/Abubjazov/SmartCalc
+        </a>
+        <p>
+          Документация:
+        </p>
+        <a
+          href="https://github.com/Abubjazov/SmartCalc/blob/main/README.md"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          README.md
+        </a>
+        <p>
+          Demo сервер:
+        </p>
+        <a
+          href="https://abubjazov.github.io/SmartCalc/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          github.io/SmartCalc/
+        </a>
+        <p>
+          Стэк технологий:
+        </p>
+        <h3>
+          Typescript, React, ReactRouter, ReactHelmet, Redux, ReduxThunk, Axios, Nanoid, Bcryptjs, SASS
+        </h3>
+        <p
+          class="calc-info-clarification"
+        >
+          Все права защищены! © Abubjazov 2022 (
+          <a
+            href="https://github.com/Abubjazov"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            https://github.com/Abubjazov
+          </a>
+          )
+        </p>
+      </div>
+      <div
+        class="calc-widget"
+      >
+        <p
+          class="calc-widget-p"
+        >
+          Привет, Test@t***.com
+        </p>
+        <div
+          class="calc-data-input"
+        >
+          <h1>
+            Введите данные
+          </h1>
+          <div
+            class="calc-input"
+          >
+            <input
+              class="null"
+              placeholder="Введите число"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="calc-input"
+          >
+            <input
+              class="null"
+              placeholder="Введите число"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="add-item"
+            tabindex="0"
+          >
+            +
+          </div>
+          <button>
+            Далее
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+</DocumentFragment>
+`;
