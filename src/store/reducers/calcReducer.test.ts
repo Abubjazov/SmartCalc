@@ -2,7 +2,7 @@ import { CalcActionTypes } from '../../interfaces'
 import { initialState, calcReducer } from './calcReducer'
 
 describe('Reducer: calcReducer', () => {
-	test('FETCH_CURRENT_STATE: initiating the fetching of current user data', () => {
+	test('FETCH_CURRENT_STATE: initiating the fetching of current state', () => {
 		expect(
 			calcReducer(initialState, {
 				type: CalcActionTypes.FETCH_CURRENT_STATE,
@@ -305,33 +305,90 @@ describe('Reducer: calcReducer', () => {
 			})
 		).toEqual({
 			...initialState,
-			inputItems: initialState.inputItems.map(item => {
-				if (item.key === 'NEWa13key') {
-					item.value = '13'
-				}
-				return item
-			}),
 		})
 	})
 
 	test('CHANGE_INPUT_ITEM: change input item', () => {
-		const changeItem = initialState.inputItems[0]
-
-		changeItem.value = '13'
-
 		expect(
 			calcReducer(initialState, {
 				type: CalcActionTypes.CHANGE_INPUT_ITEM,
-				payload: changeItem,
+				payload: { key: 'a13key1', value: '13' },
 			})
 		).toEqual({
 			...initialState,
-			inputItems: initialState.inputItems.map(item => {
-				if (item.key === changeItem.key) {
-					item.value = '13'
-				}
-				return item
-			}),
+			inputItems: [
+				{ key: 'a13key1', value: '13' },
+				{ key: 'a13key2', value: '' },
+			],
+		})
+	})
+
+	test('REMOVE_INPUT_ITEM: remove input item', () => {
+		expect(
+			calcReducer(initialState, {
+				type: CalcActionTypes.REMOVE_INPUT_ITEM,
+				payload: 'a13key1',
+			})
+		).toEqual({
+			...initialState,
+			inputItems: [{ key: 'a13key2', value: '' }],
+		})
+	})
+
+	test('SEARCH_ITEMS: search items', () => {
+		const testState = {
+			...initialState,
+			items: [2, 1, 11, 121, 314, 232],
+			sortedItems: [2, 1, 11, 121, 314, 232],
+			searchString: '1',
+		}
+
+		expect(
+			calcReducer(testState, {
+				type: CalcActionTypes.SEARCH_ITEMS,
+				payload: '1',
+			})
+		).toEqual({
+			...testState,
+			sortedItems: [1, 11, 121, 314],
+		})
+	})
+
+	test('SORT_ITEMS: descending sort items', () => {
+		const testState = {
+			...initialState,
+			items: [2, 11, 1, 3, 14, 2, 7, 10],
+			sortedItems: [2, 11, 1, 3, 14, 2, 7, 10],
+			sortDirection: false,
+		}
+
+		expect(
+			calcReducer(testState, {
+				type: CalcActionTypes.SORT_ITEMS,
+			})
+		).toEqual({
+			...testState,
+			sortedItems: [14, 11, 10, 7, 3, 2, 2, 1],
+			sortDirection: true,
+		})
+	})
+
+	test('SORT_ITEMS: ascending sort items', () => {
+		const testState = {
+			...initialState,
+			items: [2, 11, 1, 3, 14, 2, 7, 10],
+			sortedItems: [2, 11, 1, 3, 14, 2, 7, 10],
+			sortDirection: true,
+		}
+
+		expect(
+			calcReducer(testState, {
+				type: CalcActionTypes.SORT_ITEMS,
+			})
+		).toEqual({
+			...testState,
+			sortedItems: [1, 2, 2, 3, 7, 10, 11, 14],
+			sortDirection: false,
 		})
 	})
 })
