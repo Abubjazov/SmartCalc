@@ -1,3 +1,5 @@
+import { InputItem } from '../interfaces'
+import { inputItemsInitValue } from '../store/reducers/calcReducer'
 import {
 	capitalizeFirstLetter,
 	checkInputItems,
@@ -7,6 +9,8 @@ import {
 	maskEmail,
 	maskString,
 	matchCheck,
+	returnInputItems,
+	returnSummary,
 	splitString,
 } from './utils'
 
@@ -108,14 +112,41 @@ describe('Function: utils/checkInputItems()', () => {
 	})
 })
 
-const userData = '{"token":"testtoken","email":"test@test.com","name":"Victor"}'
-
 describe('Function: utils/convertAuthData()', () => {
+	const userData =
+		'{"token":"testtoken","email":"test@test.com","name":"Victor"}'
+
 	test('convertAuthData() / convert AuthData', () => {
 		expect(convertAuthData(userData)).toEqual({
 			token: 'testtoken',
 			email: 'test@test.com',
 			name: 'Victor',
 		})
+	})
+})
+
+describe('Function: utils/returnInputItems()', () => {
+	const inputItems: number[] = [1, 2, 3]
+
+	test('returnInputItems() / return input items initial value', () => {
+		expect(returnInputItems([])).toEqual([...inputItemsInitValue])
+	})
+
+	test('returnInputItems() / return real input items values', () => {
+		expect(
+			returnInputItems(inputItems).map((item: InputItem) => item.value)
+		).toEqual(['1', '2', '3'])
+	})
+})
+
+describe('Function: utils/returnSummary()', () => {
+	const inputItems: number[] = [1, 2, 3]
+
+	test('returnSummary() / return summary = 0', () => {
+		expect(returnSummary([])).toEqual(0)
+	})
+
+	test('returnSummary() / return summary = 6', () => {
+		expect(returnSummary(inputItems)).toEqual(6)
 	})
 })
