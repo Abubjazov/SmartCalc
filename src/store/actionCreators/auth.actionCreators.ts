@@ -42,7 +42,7 @@ export const deleteToken = () => {
 			})
 		} catch (error: any) {
 			dispatch({
-				type: AuthActionTypes.FETCH_TOKEN_ERROR,
+				type: AuthActionTypes.DELETE_TOKEN_ERROR,
 				payload: `Извините, произошла ошибка при попытке удаления токена! Попробуйте повторить попытку.*Описание ошибки: ${
 					error?.message + '>>' + error?.response?.data?.error
 				}`,

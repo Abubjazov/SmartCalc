@@ -3,7 +3,6 @@ import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
 
 import { AuthActionTypes } from '../../interfaces'
-import { deleteFromLocalStorage } from '../../utils/utils'
 import { clearError, deleteToken, fetchToken } from './auth.actionCreators'
 
 jest.mock('axios')
@@ -69,8 +68,6 @@ describe('Action creator: fetchToken', () => {
 })
 
 describe('Action creator: deleteToken', () => {
-	beforeAll(() => {})
-
 	test('Deleting: Success', async () => {
 		const expectedActions = [
 			{
@@ -88,27 +85,27 @@ describe('Action creator: deleteToken', () => {
 		})
 	})
 
-	// test('Deleting: Error', async () => {
-	// 	const errorMessage = 'Token delete Error'
+	test('Deleting: Error', async () => {
+		const errorMessage = 'Token delete Error'
 
-	// 	Storage.prototype.removeItem = jest
-	// 		.fn()
-	// 		.mockReturnValue(new Error(errorMessage))
+		Storage.prototype.removeItem = jest.fn().mockImplementationOnce(() => {
+			throw new Error(errorMessage)
+		})
 
-	// 	const expectedActions = [
-	// 		{
-	// 			type: AuthActionTypes.DELETE_TOKEN,
-	// 		},
-	// 		{
-	// 			type: AuthActionTypes.DELETE_TOKEN_ERROR,
-	// 			payload: `Извините, произошла ошибка при попытке удаления токена! Попробуйте повторить попытку.*Описание ошибки: ${errorMessage}>>undefined`,
-	// 		},
-	// 	]
-	// 	const store = mockStore({})
-	// 	return store.dispatch(deleteToken()).then(() => {
-	// 		expect(store.getActions()).toEqual(expectedActions)
-	// 	})
-	// })
+		const expectedActions = [
+			{
+				type: AuthActionTypes.DELETE_TOKEN,
+			},
+			{
+				type: AuthActionTypes.DELETE_TOKEN_ERROR,
+				payload: `Извините, произошла ошибка при попытке удаления токена! Попробуйте повторить попытку.*Описание ошибки: ${errorMessage}>>undefined`,
+			},
+		]
+		const store = mockStore({})
+		return store.dispatch(deleteToken()).then(() => {
+			expect(store.getActions()).toEqual(expectedActions)
+		})
+	})
 })
 
 describe('Action creator: clearError', () => {
