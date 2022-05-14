@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: CalcInput should render CalcInput default 1`] = `
+<DocumentFragment>
+  <div
+    class="calc-input"
+  >
+    <input
+      class="null"
+      placeholder="Введите число"
+      type="text"
+      value=""
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Component: CalcInput should render CalcInput default 2`] = `
+<DocumentFragment>
+  <div
+    class="calc-input"
+  >
+    <input
+      class="null"
+      placeholder="Введите число"
+      type="text"
+      value=""
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Component: CalcInput should render CalcInput default 3`] = `
+<DocumentFragment>
+  <div
+    class="calc-input"
+  >
+    <input
+      class="warning"
+      placeholder="Введите число"
+      type="text"
+      value=""
+    />
+    <p
+      class="calc-input-warning"
+    >
+      Введите число
+    </p>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Component: CalcInput should render CalcInput input value, submitStatus is null 1`] = `
+<DocumentFragment>
+  <div
+    class="calc-input"
+  >
+    <input
+      class="null"
+      placeholder="Введите число"
+      type="text"
+      value=""
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Component: CalcInput should render CalcInput input value, submitStatus is null 2`] = `
+<DocumentFragment>
+  <div
+    class="calc-input"
+  >
+    <input
+      class="null"
+      placeholder="Введите число"
+      type="text"
+      value=""
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Component: CalcInput should render CalcInput input value, submitStatus is true 1`] = `
+<DocumentFragment>
+  <div
+    class="calc-input"
+  >
+    <input
+      class="null"
+      placeholder="Введите число"
+      type="text"
+      value=""
+    />
+  </div>
+</DocumentFragment>
+`;

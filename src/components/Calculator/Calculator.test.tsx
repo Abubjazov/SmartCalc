@@ -3,8 +3,10 @@ import { Provider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
 import configureStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
-import { inputItemsInitValue } from '../../store/reducers/calcReducer'
+
 import { Calculator } from './Calculator'
+
+import { inputItemsInitValue } from '../../store/reducers/calcReducer'
 
 const middlewares = [thunk]
 const mockStore = configureStore(middlewares)
