@@ -1,3 +1,4 @@
+import { KeyboardEvent } from 'react'
 import { nanoid } from 'nanoid'
 import { useActions } from '../../hooks/useActions'
 import { Helmet } from 'react-helmet'
@@ -5,7 +6,6 @@ import { Helmet } from 'react-helmet'
 import { useTypedSelector } from '../../hooks/useTypedSelector'
 
 import './CalcDataConfirm.scss'
-import { KeyboardEvent } from 'react'
 
 export const CalcDataConfirm = (): JSX.Element => {
 	const { sortedItems, sortDirection, searchString } = useTypedSelector(
