@@ -2,12 +2,10 @@ import { render } from '@testing-library/react'
 import { Provider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
 import configureStore from 'redux-mock-store'
-import thunk from 'redux-thunk'
 
 import { MainPage } from './MainPage'
 
-const middlewares = [thunk]
-const mockStore = configureStore(middlewares)
+const mockStore = configureStore()
 
 describe('Component: MainPage', () => {
 	test('should render MainPage with "Войти"', () => {
