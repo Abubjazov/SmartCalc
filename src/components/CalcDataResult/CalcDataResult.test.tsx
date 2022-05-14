@@ -7,19 +7,28 @@ import thunk from 'redux-thunk'
 import { CalcActionTypes } from '../../interfaces'
 import { CalcDataResult } from './CalcDataResult'
 
-const mockStore = configureStore()
-
 describe('Component: CalcDataInput', () => {
-	test('should render CalcDataInput by default', () => {
-		const store = mockStore({
-			calc: {
-				items: [1, 2, 3, 44],
-			},
-			auth: {
-				token: 'testtoken',
-			},
-		})
+	const middlewares = [thunk]
+	const mockStore = configureStore(middlewares)
 
+	const store = mockStore({
+		calc: {
+			items: [1, 2, 3, 44],
+			summary: 51,
+		},
+		auth: {
+			token: 'testtoken',
+		},
+	})
+
+	let expectedActions = []
+
+	beforeEach(() => {
+		expectedActions = []
+		store.clearActions()
+	})
+
+	test('should render CalcDataInput by default', () => {
 		const { asFragment } = render(
 			<Provider store={store}>
 				<CalcDataResult />
@@ -30,19 +39,7 @@ describe('Component: CalcDataInput', () => {
 	})
 
 	test('should dispatch an action on "To Data Input" Button Click', () => {
-		const middlewares = [thunk]
-		const mockStore = configureStore(middlewares)
-
-		const store = mockStore({
-			calc: {
-				items: [1, 2, 3, 44],
-			},
-			auth: {
-				token: 'testtoken',
-			},
-		})
-
-		const expectedActions = [
+		expectedActions = [
 			{ type: CalcActionTypes.RESET_TO_DATA_INPUT, payload: 'testtoken' },
 		]
 
@@ -57,19 +54,7 @@ describe('Component: CalcDataInput', () => {
 	})
 
 	test('should dispatch an action on "To New Calculation" Button Click', () => {
-		const middlewares = [thunk]
-		const mockStore = configureStore(middlewares)
-
-		const store = mockStore({
-			calc: {
-				items: [1, 2, 3, 44],
-			},
-			auth: {
-				token: 'testtoken',
-			},
-		})
-
-		const expectedActions = [
+		expectedActions = [
 			{ type: CalcActionTypes.RESET_TO_NEW_CALCULATION, payload: 'testtoken' },
 		]
 
