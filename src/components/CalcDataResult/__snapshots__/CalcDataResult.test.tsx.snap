@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: CalcDataInput should render CalcDataInput by default 1`] = `
+<DocumentFragment>
+  <div
+    class="calc-data-result"
+  >
+    <h1>
+      Результаты расчёта
+    </h1>
+    <ul>
+      <li
+        class=""
+      >
+        1
+      </li>
+      <li
+        class=""
+      >
+        2
+      </li>
+      <li
+        class=""
+      >
+        3
+      </li>
+      <li
+        class="green"
+      >
+        44
+      </li>
+    </ul>
+    <h2>
+      Сумма: 
+    </h2>
+    <div
+      class="calc-data-result-footer"
+    >
+      <button>
+        Ввод данных
+      </button>
+      <button>
+        Новый расчёт
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
