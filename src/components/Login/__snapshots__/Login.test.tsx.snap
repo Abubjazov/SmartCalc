@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Login should render Login default 1`] = `
+<DocumentFragment>
+  <div
+    class="login-widget"
+  >
+    <input
+      class="null"
+      placeholder="your@email.com"
+      type="email"
+      value=""
+    />
+    <input
+      class="null"
+      placeholder="password"
+      type="password"
+      value=""
+    />
+    <button
+      disabled=""
+    >
+      Войти
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Component: Login should render Login status is "Error" 1`] = `
+<DocumentFragment>
+  <div
+    class="login-widget"
+  >
+    <input
+      class="null"
+      placeholder="your@email.com"
+      type="email"
+      value=""
+    />
+    <input
+      class="null"
+      placeholder="password"
+      type="password"
+      value=""
+    />
+    <p>
+      Неверный логин или пароль
+    </p>
+    <button
+      disabled=""
+    >
+      Войти
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Component: Login should render Login with "valid login & password" 1`] = `
+<DocumentFragment>
+  <div
+    class="login-widget"
+  >
+    <input
+      class="null"
+      placeholder="your@email.com"
+      type="email"
+      value="test@test.com"
+    />
+    <input
+      class="null"
+      placeholder="password"
+      type="password"
+      value=""
+    />
+    <button
+      disabled=""
+    >
+      Войти
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Component: Login should render Login with "valid login & password" 2`] = `
+<DocumentFragment>
+  <div
+    class="login-widget"
+  >
+    <input
+      class="null"
+      placeholder="your@email.com"
+      type="email"
+      value="test@test.com"
+    />
+    <input
+      class="null"
+      placeholder="password"
+      type="password"
+      value="password"
+    />
+    <button>
+      Войти
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Component: Login should render Login with "valid login & password" 3`] = `
+<DocumentFragment>
+  <div
+    class="login-widget"
+  >
+    <input
+      class="warning"
+      placeholder="your@email.com"
+      type="email"
+      value="test@test.com@."
+    />
+    <p>
+      Неверный формат email
+    </p>
+    <input
+      class="warning"
+      placeholder="password"
+      type="password"
+      value="password"
+    />
+    <button
+      disabled=""
+    >
+      Войти
+    </button>
+  </div>
+</DocumentFragment>
+`;
