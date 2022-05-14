@@ -23,6 +23,12 @@ https://abubjazov.github.io/SmartCalc/
 
 ![LANDING](docs/calc.jpg)
 
+## Покрытие тестами
+
+![TEST_COVERAGE](docs/test_coverage_1.jpg)
+<br>
+![TEST_COVERAGE](docs/test_coverage_2.jpg)
+
 ## Отчеты Lighthouse
 
 **Страница калькулятора Desktop**
