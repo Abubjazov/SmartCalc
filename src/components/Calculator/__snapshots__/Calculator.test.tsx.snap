@@ -57,6 +57,71 @@ exports[`Component: Calculator should render CalcDataConfirm 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Component: Calculator should render CalcDataConfirm with error message 1`] = `
+<DocumentFragment>
+  <div
+    class="calc-widget"
+  >
+    <div
+      class="error-message"
+      role="alert"
+    >
+      <p
+        class="error-message-p"
+        tabindex="0"
+      >
+        ERROR
+      </p>
+      <p
+        class="error-message-p"
+        tabindex="0"
+      >
+        Test Error String
+      </p>
+      <a
+        class="error-message-a"
+        href="/smartcalc/"
+      >
+        Вернуться на главную
+      </a>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Component: Calculator should render CalcDataConfirm with loading spinner 1`] = `
+<DocumentFragment>
+  <div
+    class="calc-widget"
+  >
+    <svg
+      class="spinner"
+      height="200"
+      preserveAspectRatio="xMidYMid"
+      viewBox="0 0 100 100"
+      width="200"
+    >
+      <path
+        d="M24.3 30C11.4 30 5 43.3 5 50s6.4 20 19.3 20c19.3 0 32.1-40 51.4-40 C88.6 30 95 43.3 95 50s-6.4 20-19.3 20C56.4 70 43.6 30 24.3 30z"
+        fill="none"
+        stroke="#cccccc"
+        stroke-dasharray="42.76482137044271 42.76482137044271"
+        stroke-linecap="round"
+        stroke-width="8"
+      >
+        <animate
+          attributeName="stroke-dashoffset"
+          dur="1s"
+          keyTimes="0;1"
+          repeatCount="indefinite"
+          values="0;256.58892822265625"
+        />
+      </path>
+    </svg>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Component: Calculator should render CalcDataInput 1`] = `
 <DocumentFragment>
   <div
@@ -103,6 +168,71 @@ exports[`Component: Calculator should render CalcDataInput 1`] = `
         Далее
       </button>
     </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Component: Calculator should render CalcDataInput with error message 1`] = `
+<DocumentFragment>
+  <div
+    class="calc-widget"
+  >
+    <div
+      class="error-message"
+      role="alert"
+    >
+      <p
+        class="error-message-p"
+        tabindex="0"
+      >
+        ERROR
+      </p>
+      <p
+        class="error-message-p"
+        tabindex="0"
+      >
+        Test Error String
+      </p>
+      <a
+        class="error-message-a"
+        href="/smartcalc/"
+      >
+        Вернуться на главную
+      </a>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Component: Calculator should render CalcDataInput with loading spinner 1`] = `
+<DocumentFragment>
+  <div
+    class="calc-widget"
+  >
+    <svg
+      class="spinner"
+      height="200"
+      preserveAspectRatio="xMidYMid"
+      viewBox="0 0 100 100"
+      width="200"
+    >
+      <path
+        d="M24.3 30C11.4 30 5 43.3 5 50s6.4 20 19.3 20c19.3 0 32.1-40 51.4-40 C88.6 30 95 43.3 95 50s-6.4 20-19.3 20C56.4 70 43.6 30 24.3 30z"
+        fill="none"
+        stroke="#cccccc"
+        stroke-dasharray="42.76482137044271 42.76482137044271"
+        stroke-linecap="round"
+        stroke-width="8"
+      >
+        <animate
+          attributeName="stroke-dashoffset"
+          dur="1s"
+          keyTimes="0;1"
+          repeatCount="indefinite"
+          values="0;256.58892822265625"
+        />
+      </path>
+    </svg>
   </div>
 </DocumentFragment>
 `;
@@ -158,7 +288,7 @@ exports[`Component: Calculator should render CalcDataResult 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Component: Calculator should render Calculator with error message 1`] = `
+exports[`Component: Calculator should render CalcDataResult with error message 1`] = `
 <DocumentFragment>
   <div
     class="calc-widget"
@@ -190,7 +320,7 @@ exports[`Component: Calculator should render Calculator with error message 1`] =
 </DocumentFragment>
 `;
 
-exports[`Component: Calculator should render Calculator with loading spinner 1`] = `
+exports[`Component: Calculator should render CalcDataResult with loading spinner 1`] = `
 <DocumentFragment>
   <div
     class="calc-widget"
@@ -220,5 +350,13 @@ exports[`Component: Calculator should render Calculator with loading spinner 1`]
       </path>
     </svg>
   </div>
+</DocumentFragment>
+`;
+
+exports[`Component: Calculator should render empty Calculator 1`] = `
+<DocumentFragment>
+  <div
+    class="calc-widget"
+  />
 </DocumentFragment>
 `;

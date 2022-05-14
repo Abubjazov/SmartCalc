@@ -10,7 +10,7 @@ const middlewares = [thunk]
 const mockStore = configureStore(middlewares)
 
 describe('Component: Calculator', () => {
-	test('should render Calculator with loading spinner', () => {
+	test('should render CalcDataInput with loading spinner', () => {
 		const store = mockStore({
 			auth: {
 				token: 'testtoken',
@@ -33,7 +33,53 @@ describe('Component: Calculator', () => {
 		expect(asFragment()).toMatchSnapshot()
 	})
 
-	test('should render Calculator with error message', () => {
+	test('should render CalcDataConfirm with loading spinner', () => {
+		const store = mockStore({
+			auth: {
+				token: 'testtoken',
+				email: 'test@test.com',
+			},
+			calc: {
+				step: 2,
+				status: 'loading',
+				error: null,
+				inputItems: [...inputItemsInitValue],
+			},
+		})
+
+		const { asFragment } = render(
+			<Provider store={store}>
+				<Calculator />
+			</Provider>
+		)
+
+		expect(asFragment()).toMatchSnapshot()
+	})
+
+	test('should render CalcDataResult with loading spinner', () => {
+		const store = mockStore({
+			auth: {
+				token: 'testtoken',
+				email: 'test@test.com',
+			},
+			calc: {
+				step: 4,
+				status: 'loading',
+				error: null,
+				inputItems: [...inputItemsInitValue],
+			},
+		})
+
+		const { asFragment } = render(
+			<Provider store={store}>
+				<Calculator />
+			</Provider>
+		)
+
+		expect(asFragment()).toMatchSnapshot()
+	})
+
+	test('should render CalcDataInput with error message', () => {
 		const store = mockStore({
 			auth: {
 				token: 'testtoken',
@@ -41,6 +87,56 @@ describe('Component: Calculator', () => {
 			},
 			calc: {
 				step: 1,
+				status: 'error',
+				error: 'ERROR*Test Error String>>test',
+				inputItems: [...inputItemsInitValue],
+			},
+		})
+
+		const { asFragment } = render(
+			<Provider store={store}>
+				<BrowserRouter>
+					<Calculator />
+				</BrowserRouter>
+			</Provider>
+		)
+
+		expect(asFragment()).toMatchSnapshot()
+	})
+
+	test('should render CalcDataConfirm with error message', () => {
+		const store = mockStore({
+			auth: {
+				token: 'testtoken',
+				email: 'test@test.com',
+			},
+			calc: {
+				step: 2,
+				status: 'error',
+				error: 'ERROR*Test Error String>>test',
+				inputItems: [...inputItemsInitValue],
+			},
+		})
+
+		const { asFragment } = render(
+			<Provider store={store}>
+				<BrowserRouter>
+					<Calculator />
+				</BrowserRouter>
+			</Provider>
+		)
+
+		expect(asFragment()).toMatchSnapshot()
+	})
+
+	test('should render CalcDataResult with error message', () => {
+		const store = mockStore({
+			auth: {
+				token: 'testtoken',
+				email: 'test@test.com',
+			},
+			calc: {
+				step: 4,
 				status: 'error',
 				error: 'ERROR*Test Error String>>test',
 				inputItems: [...inputItemsInitValue],
@@ -132,6 +228,29 @@ describe('Component: Calculator', () => {
 					{ key: 'a13key3', value: '11' },
 				],
 				summary: 14,
+			},
+		})
+
+		const { asFragment } = render(
+			<Provider store={store}>
+				<Calculator />
+			</Provider>
+		)
+
+		expect(asFragment()).toMatchSnapshot()
+	})
+
+	test('should render empty Calculator', () => {
+		const store = mockStore({
+			auth: {
+				token: 'testtoken',
+				email: 'test@test.com',
+			},
+			calc: {
+				step: 3,
+				status: 'waiting',
+				error: null,
+				inputItems: [...inputItemsInitValue],
 			},
 		})
 
