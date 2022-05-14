@@ -45,7 +45,7 @@ export const Login = (): JSX.Element => {
 	}
 
 	useEffect(() => {
-		setSubmitStatus(!(email.isValid === true && password.isValid === true))
+		setSubmitStatus(!(email.isValid && password.isValid))
 	}, [email.isValid, password.isValid])
 
 	useEffect(() => {
