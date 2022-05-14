@@ -7,7 +7,7 @@ import thunk from 'redux-thunk'
 import { CalcActionTypes } from '../../interfaces'
 import { CalcDataResult } from './CalcDataResult'
 
-describe('Component: CalcDataInput', () => {
+describe('Component: CalcDataResult', () => {
 	const middlewares = [thunk]
 	const mockStore = configureStore(middlewares)
 
@@ -28,7 +28,7 @@ describe('Component: CalcDataInput', () => {
 		store.clearActions()
 	})
 
-	test('should render CalcDataInput by default', () => {
+	test('should render CalcDataResult by default', () => {
 		const { asFragment } = render(
 			<Provider store={store}>
 				<CalcDataResult />
