@@ -1,0 +1,224 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Calculator should render CalcDataConfirm 1`] = `
+<DocumentFragment>
+  <div
+    class="calc-widget"
+  >
+    <p
+      class="calc-widget-p"
+    >
+      Привет, Test@t***.com
+    </p>
+    <div
+      class="calc-data-confirm"
+    >
+      <h1>
+        Подтвердите данные
+      </h1>
+      <div
+        class="calc-data-confirm-search"
+      >
+        <input
+          placeholder="Поиск"
+          type="text"
+          value=""
+        />
+        <div
+          class="sort null"
+          tabindex="0"
+        >
+          ^
+        </div>
+      </div>
+      <ul>
+        <li>
+          1
+        </li>
+        <li>
+          2
+        </li>
+        <li>
+          3
+        </li>
+      </ul>
+      <div
+        class="calc-data-confirm-footer"
+      >
+        <button>
+          Назад
+        </button>
+        <button>
+          Подтверждаю
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Component: Calculator should render CalcDataInput 1`] = `
+<DocumentFragment>
+  <div
+    class="calc-widget"
+  >
+    <p
+      class="calc-widget-p"
+    >
+      Привет, Test@t***.com
+    </p>
+    <div
+      class="calc-data-input"
+    >
+      <h1>
+        Введите данные
+      </h1>
+      <div
+        class="calc-input"
+      >
+        <input
+          class="null"
+          placeholder="Введите число"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        class="calc-input"
+      >
+        <input
+          class="null"
+          placeholder="Введите число"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        class="add-item"
+        tabindex="0"
+      >
+        +
+      </div>
+      <button>
+        Далее
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Component: Calculator should render CalcDataResult 1`] = `
+<DocumentFragment>
+  <div
+    class="calc-widget"
+  >
+    <p
+      class="calc-widget-p"
+    >
+      Привет, Test@t***.com
+    </p>
+    <div
+      class="calc-data-result"
+    >
+      <h1>
+        Результаты расчёта
+      </h1>
+      <ul>
+        <li
+          class=""
+        >
+          1
+        </li>
+        <li
+          class=""
+        >
+          2
+        </li>
+        <li
+          class="green"
+        >
+          11
+        </li>
+      </ul>
+      <h2>
+        Сумма: 14
+      </h2>
+      <div
+        class="calc-data-result-footer"
+      >
+        <button>
+          Ввод данных
+        </button>
+        <button>
+          Новый расчёт
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Component: Calculator should render Calculator with error message 1`] = `
+<DocumentFragment>
+  <div
+    class="calc-widget"
+  >
+    <div
+      class="error-message"
+      role="alert"
+    >
+      <p
+        class="error-message-p"
+        tabindex="0"
+      >
+        ERROR
+      </p>
+      <p
+        class="error-message-p"
+        tabindex="0"
+      >
+        Test Error String
+      </p>
+      <a
+        class="error-message-a"
+        href="/smartcalc/"
+      >
+        Вернуться на главную
+      </a>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Component: Calculator should render Calculator with loading spinner 1`] = `
+<DocumentFragment>
+  <div
+    class="calc-widget"
+  >
+    <svg
+      class="spinner"
+      height="200"
+      preserveAspectRatio="xMidYMid"
+      viewBox="0 0 100 100"
+      width="200"
+    >
+      <path
+        d="M24.3 30C11.4 30 5 43.3 5 50s6.4 20 19.3 20c19.3 0 32.1-40 51.4-40 C88.6 30 95 43.3 95 50s-6.4 20-19.3 20C56.4 70 43.6 30 24.3 30z"
+        fill="none"
+        stroke="#cccccc"
+        stroke-dasharray="42.76482137044271 42.76482137044271"
+        stroke-linecap="round"
+        stroke-width="8"
+      >
+        <animate
+          attributeName="stroke-dashoffset"
+          dur="1s"
+          keyTimes="0;1"
+          repeatCount="indefinite"
+          values="0;256.58892822265625"
+        />
+      </path>
+    </svg>
+  </div>
+</DocumentFragment>
+`;
