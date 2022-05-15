@@ -354,6 +354,25 @@ describe('Reducer: calcReducer', () => {
 		})
 	})
 
+	test('SEARCH_ITEMS: do not search items', () => {
+		const testState = {
+			...initialState,
+			items: [2, 1, 11, 121, 314, 232],
+			sortedItems: [2, 1, 11, 121, 314, 232],
+			searchString: '',
+		}
+
+		expect(
+			calcReducer(testState, {
+				type: CalcActionTypes.SEARCH_ITEMS,
+				payload: '',
+			})
+		).toEqual({
+			...testState,
+			sortedItems: [2, 1, 11, 121, 314, 232],
+		})
+	})
+
 	test('SORT_ITEMS: descending sort items', () => {
 		const testState = {
 			...initialState,
