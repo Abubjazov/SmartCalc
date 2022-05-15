@@ -3,7 +3,7 @@ import { Dispatch } from 'redux'
 
 import { CalcAction, CalcActionTypes, InputItem } from '../../interfaces'
 
-export const fetchCurrentState = (token: string) => {
+export const fetchCurrentState = (token: string): any => {
 	return async (dispatch: Dispatch<CalcAction>) => {
 		try {
 			dispatch({ type: CalcActionTypes.FETCH_CURRENT_STATE, payload: token })
@@ -32,7 +32,7 @@ export const fetchCurrentState = (token: string) => {
 	}
 }
 
-export const switchToConfirm = (items: number[], token: string | null) => {
+export const switchToConfirm = (items: number[], token: string | null): any => {
 	return async (dispatch: Dispatch<CalcAction>) => {
 		try {
 			dispatch({
@@ -65,7 +65,7 @@ export const switchToConfirm = (items: number[], token: string | null) => {
 	}
 }
 
-export const addInputItem = (item: InputItem) => {
+export const addInputItem = (item: InputItem): any => {
 	return async (dispatch: Dispatch<CalcAction>) => {
 		dispatch({
 			type: CalcActionTypes.ADD_INPUT_ITEM,
@@ -74,7 +74,7 @@ export const addInputItem = (item: InputItem) => {
 	}
 }
 
-export const changeInputItem = (key: string, value: string) => {
+export const changeInputItem = (key: string, value: string): any => {
 	return async (dispatch: Dispatch<CalcAction>) => {
 		dispatch({
 			type: CalcActionTypes.CHANGE_INPUT_ITEM,
@@ -83,7 +83,7 @@ export const changeInputItem = (key: string, value: string) => {
 	}
 }
 
-export const removeInputItem = (itemKey: string) => {
+export const removeInputItem = (itemKey: string): any => {
 	return async (dispatch: Dispatch<CalcAction>) => {
 		dispatch({
 			type: CalcActionTypes.REMOVE_INPUT_ITEM,
@@ -92,7 +92,7 @@ export const removeInputItem = (itemKey: string) => {
 	}
 }
 
-export const sortItems = () => {
+export const sortItems = (): any => {
 	return async (dispatch: Dispatch<CalcAction>) => {
 		dispatch({
 			type: CalcActionTypes.SORT_ITEMS,
@@ -100,7 +100,7 @@ export const sortItems = () => {
 	}
 }
 
-export const searchItems = (searchString: string) => {
+export const searchItems = (searchString: string): any => {
 	return async (dispatch: Dispatch<CalcAction>) => {
 		dispatch({
 			type: CalcActionTypes.SEARCH_ITEMS,
@@ -109,7 +109,7 @@ export const searchItems = (searchString: string) => {
 	}
 }
 
-export const switchToDataInput = (token: string | null) => {
+export const switchToDataInput = (token: string | null): any => {
 	return async (dispatch: Dispatch<CalcAction>) => {
 		try {
 			dispatch({
@@ -142,7 +142,7 @@ export const switchToDataInput = (token: string | null) => {
 	}
 }
 
-export const switchToResult = (token: string | null) => {
+export const switchToResult = (token: string | null): any => {
 	return async (dispatch: Dispatch<CalcAction>) => {
 		try {
 			dispatch({
@@ -175,7 +175,7 @@ export const switchToResult = (token: string | null) => {
 	}
 }
 
-export const resetToDataInput = (token: string | null) => {
+export const resetToDataInput = (token: string | null): any => {
 	return async (dispatch: Dispatch<CalcAction>) => {
 		try {
 			dispatch({
@@ -208,7 +208,7 @@ export const resetToDataInput = (token: string | null) => {
 	}
 }
 
-export const resetToNewCalculation = (token: string | null) => {
+export const resetToNewCalculation = (token: string | null): any => {
 	return async (dispatch: Dispatch<CalcAction>) => {
 		try {
 			dispatch({

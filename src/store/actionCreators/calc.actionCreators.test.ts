@@ -24,7 +24,7 @@ const middlewares = [thunk]
 const mockStore = configureMockStore(middlewares)
 
 describe('Action creator: fetchCurrentState', () => {
-	test('Fetching: Success', async () => {
+	test('Fetching: Success', () => {
 		mockedAxios.get.mockImplementationOnce(() =>
 			Promise.resolve({
 				data: {
