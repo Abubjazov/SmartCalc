@@ -3,7 +3,7 @@ import { Dispatch } from 'redux'
 
 import { AuthAction, AuthActionTypes, AuthData } from '../../interfaces'
 
-export const fetchToken = (authData: AuthData) => {
+export const fetchToken = (authData: AuthData): any => {
 	return async (dispatch: Dispatch<AuthAction>) => {
 		try {
 			dispatch({ type: AuthActionTypes.FETCH_TOKEN, payload: authData })
@@ -30,7 +30,7 @@ export const fetchToken = (authData: AuthData) => {
 	}
 }
 
-export const deleteToken = () => {
+export const deleteToken = (): any => {
 	return async (dispatch: Dispatch<AuthAction>) => {
 		try {
 			dispatch({ type: AuthActionTypes.DELETE_TOKEN })
@@ -51,7 +51,7 @@ export const deleteToken = () => {
 	}
 }
 
-export const clearError = () => {
+export const clearError = (): any => {
 	return async (dispatch: Dispatch<AuthAction>) => {
 		dispatch({ type: AuthActionTypes.CLEAR_ERROR })
 	}
