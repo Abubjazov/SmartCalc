@@ -71,3 +71,12 @@ npm run test
 ```
 npm run deploy
 ```
+
+[![video](docs/Smart_calc.mp4)](docs/Smart_calc.mp4)
+
+> [!DEMO]
+> Highlights information that users should take into account, even when skimming.
+
+#### 📺 Preview
+
+https://github.com/Abubjazov/SmartCalc/docs/Smart_calc.mp4
