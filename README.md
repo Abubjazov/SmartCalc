@@ -71,4 +71,3 @@ npm run test
 ```
 npm run deploy
 ```
-https://github.com/Abubjazov/SmartCalc/blob/main/docs/Smart_calc.mp4
