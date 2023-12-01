@@ -72,7 +72,7 @@ npm run test
 npm run deploy
 ```
 
-[![video](https://github.com/Abubjazov/SmartCalc/blob/main/docs/Smart_calc.mp4)](https://github.com/Abubjazov/SmartCalc/blob/main/docs/Smart_calc.mp4)
+[Screencast from 2023-12-01 18-16-58.webm](https://github.com/Abubjazov/SmartCalc/assets/1412333/3ad3e4c0-547d-4a93-a87b-987c285ad0f4)
 
 > [!NOTE]
 > Highlights information that users should take into account, even when skimming.
